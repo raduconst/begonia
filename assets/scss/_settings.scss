@@ -10,12 +10,14 @@ $line-height:           1.5;
 $baseline-unit:         12px;
 
 // colors
-$color-dark:            #252525;
+$color-dark:            #313131;
 $color-gray:            #757575;
-$color-light:           #EBEBEB;
+$color-light-grey:      #F6F6F6;
+$color-smoke-grey:      #D1D1D1;
+$color-accent:          #0300FF;
 
 // Debug settings
-$debug:                 true;
+$debug:                 false;
 $baseline-debug:        $debug;
 
 // mobile first means we need min-width media queries
