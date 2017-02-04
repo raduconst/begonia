@@ -1,25 +1,105 @@
-@charset "UTF-8";
 /*
 Theme Name: Begonia
-Theme URI: http://pixelgrade.com/demos/begonia/
+Theme URI: https://demos.pixelgrade.com/boilerplate/
 Author: PixelGrade
-Author URI: http://pixelgrade.com
-Description: Adler is a personal blogging theme for sharing your own thoughts and write about your latest findings!
-Version: 1.0
+Author URI: https://pixelgrade.com
+Description: Some lovely description of your theme here.
+Version: 0.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: begonia
-Tags: black, blue, green, white, light, one-column, fluid-layout, responsive-layout, custom-background, custom-colors, custom-menu, editor-style, featured-image-header, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
+Text Domain: boilerplate
+Domain Path: /languages/
+Tags:
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-The Adler is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+themename is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
 
-Resetting and rebuilding styles have been helped along thanks to the fine work of
-Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
-along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-and Blueprint http://www.blueprintcss.org/
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
-@import "main";
+/**
+ *
+ * Table of Contents
+ *
+ * 1.0 - Reset
+ * 2.0 - Base Styles
+ * 3.0 - Abstractions
+ * 4.0 - Components
+ * 5.0 - Utility
+ * 6.0 - Layout
+ * 7.0 - Hacks and Overrides
+ *
+ */
+
+@import "settings";
+
+@import "tools/functions";
+@import "tools/mixins";
+
+@import "tools/wp-offset";
+@import "tools/baseline";
+
+/**
+ * 1.0 - Reset
+ */
+@import "generic/normalize";
+@import "generic/reset";
+
+/**
+ * 2.0 - Base Styles
+ */
+@import "tools/typeline";
+
+@import "base/blockquote";
+@import "base/forms";
+@import "base/lists";
+@import "base/links";
+@import "base/pre";
+@import "base/table";
+@import "base/titles";
+@import "base/typography";
+
+@import "base/wp-align";
+
+/**
+ * 3.0 - Abstractions
+ */
+// @import "objects/_dummy-object";
+
+// @import "objects/grid";
+
+/**
+ * 4.0 - Components
+ */
+// @import "components/_dummy-component";
+
+// @import "components/btn";
+
+// @import "components/navbar/navbar";
+// @import "components/burger";
+
+@import "components/hero";
+@import "components/header";
+@import "components/footer";
+@import "components/widgets";
+
+/**
+ * 5.0 - Utility Classes
+ */
+@import "utility/widths";
+
+/**
+ * 6.0 - Layout
+ */
+@import "layout/archive";
+@import "layout/page";
+@import "layout/single";
+
+/**
+ * 7.0 - Hacks and Overrides
+ */
+@import "shame";

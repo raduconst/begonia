@@ -1,95 +1,30 @@
-///*------------------------------------*\
-//    #MIXINS
-//\*------------------------------------*/
+// shorthand media queries for defined breakpoints
+@mixin above($bpname) {
+    @media only screen and ( min-width: map-get($breakpoints, $bpname) ) {
+        @content;
+    }
+}
 
-$typography-font-sizes: () !default;
+@mixin below($bpname) {
+    @media not screen and ( min-width: map-get($breakpoints, $bpname) ) {
+        @content;
+    }
+}
 
-// #TYPOGRAPHY
-
-@mixin new-fs-class($font-size, $direction: null, $value: null, $force: false) {
-
-    @if not index($typography-font-sizes, $font-size) or $force {
-
-        $typography-font-sizes: append($typography-font-sizes, $font-size) !global;
-
-        @if not $direction {
-            .fs-#{$font-size} {
-                @include font-size($font-size);
-            }
+@mixin font-face($name, $filename, $weight: null) {
+    @font-face {
+        font-family: $name;
+        @if $weight != null {
+            font-wight: $weight;
         }
-
-        @if ($direction) {
-            @include query($direction, $value) {
-                .fs-#{$font-size}-#{$direction}-#{$value} {
-                    @include font-size($font-size);
-                }
-            }
-        }
-
+        src: url(unquote($filename) + '.woff2') format('woff2'), /* Super Modern Browsers */
+            url(unquote($filename) + '.woff') format('woff'); /* Pretty Modern Browsers */
     }
 }
 
-
-
-
-
-@mixin fs($font-size, $top: null, $bottom: null, $overwrite: true) {
-
-    @at-root {
-        @include new-fs-class($font-size);
-    }
-
-    @extend .fs-#{$font-size};
-
-    @if ($top != null) {
-        @include baseline-leader($top, $font-size);
-    }
-
-    @if ($bottom != null) {
-        @include baseline-trailer($bottom, $font-size);
-    }
-}
-
-@mixin fs-query($direction, $value, $font-size, $top, $bottom, $overwrite: true) {
-
-    @extend .fs-#{$font-size}-#{$direction}-#{$value};
-
-    @include query($direction, $value) {
-
-        @if ($top != null) {
-            @include baseline-leader($top, $font-size);
-        }
-
-        @if ($bottom != null) {
-            @include baseline-trailer($bottom, $font-size);
-        }
-    }
-}
-
-@mixin fs-below($value, $font-size, $top: null, $bottom: null, $overwrite: true) {
-    @include fs-query('below', $value, $font-size, $top, $bottom);
-}
-
-@mixin fs-above($value, $font-size, $top: null, $bottom: null, $overwrite: true) {
-    @include fs-query('above', $value, $font-size, $top, $bottom);
-}
-
-
-
-
-
-
-@mixin placeholder {
-	&::-webkit-input-placeholder {
-		@content
-	}
-	&:-moz-placeholder {
-		@content
-	}
-	&::-moz-placeholder {
-		@content
-	}
-	&:-ms-input-placeholder {
-		@content
-	}
+@mixin placeholder() {
+    ::-webkit-input-placeholder { @content; }
+    ::-moz-placeholder { @content; }
+    :-ms-input-placeholder { @content; }
+    :-moz-placeholder { @content; }
 }

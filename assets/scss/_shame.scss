@@ -1,16 +1,9 @@
-.skip-link {
-  display: none;
+// Nothing to see here. We do clean after ourselves
+
+html {
+    padding: 0 20px;
 }
 
-.screen-reader-text {
-	position:absolute;
-	left:-1000em;
-}
-
-#page {
-  position: relative;
-}
-
-.edit-link > a {
-  float: right;
+section {
+    padding: 20px 0;
 }

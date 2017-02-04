@@ -1,20 +1,52 @@
-// ------ #STYLE GUIDE
-$tiny:                      500px;
-$small:						740px;
-$lap: 						900px;
-$desk: 						1200px;
 
-// ------ #COLORS
-$accent:					#68f3c8;
-$lightest:     				#f7f7f7;
-$borders:   				#afafaf;
-$gray:						#45525a;
-$dark:                      #0e364f;
-$black:						#000000;
-$white:                     #ffffff;
-$caption:                   #7c868b;
+// Settings
+// ==============================
 
-// High-level base settings.
-$base-font-size:            13px;
-$base-line-height:          24px;
-$gutter: 					30px;
+// typography settings
+$font-size:             16px;
+$line-height:           1.5;
+
+// baseline
+$baseline-unit:         12px;
+
+// colors
+$color-dark:            #252525;
+$color-gray:            #757575;
+$color-light:           #EBEBEB;
+
+// Debug settings
+$debug:                 true;
+$baseline-debug:        $debug;
+
+// mobile first means we need min-width media queries
+$breakpoints: (
+    small:              35em,
+    lap:                50em,
+    desk:               80em
+);
+
+// https://css-tricks.com/handling-z-index/
+$zindex: (
+    modal:              9000,
+    dropdown:           8000,
+    header:             7000,
+    overlay:            6000,
+    footer:             5000
+);
+
+// typeline
+$typeline-points:       0 1.2, 50 1.6, 200 1.8;
+$typeline-breakpoints:  760px 560px 400px;
+$typeline-rules: (
+    '%fs13': 13px,
+    '%fs16': 16px,
+    '%fs20': 20px,
+    '%fs32': 32px,
+    '%fs40': 40px,
+    '%fs48': 48px,
+    '%fs62': 62px
+);
+
+// misc
+$transition--micro:     .15s;
+$transition--macro:     .3s;
