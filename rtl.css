@@ -755,7 +755,8 @@ small {
       align-items: center; }
 
 ul.nav li, ul > li.nav li {
-  padding-top: 124px; }
+  padding-top: 124px;
+  list-style: none; }
 
 ul.nav li a, ul > li.nav li a {
   -webkit-transform: rotate(-270deg);
@@ -765,7 +766,24 @@ ul.nav li a, ul > li.nav li a {
   -ms-writing-mode: lr-tb;
   writing-mode: lr-tb;
   float: right;
-  white-space: pre; }
+  text-decoration: none;
+  white-space: pre;
+  margin-bottom: 20px; }
+  ul.nav li a:after, ul > li.nav li a:after {
+    content: "";
+    border-bottom: 3px solid #0300FF;
+    display: inline-block;
+    padding-right: 45px;
+    margin-right: 20px;
+    transform: rotate(0deg); }
+
+ul.nav li:nth-last-child(2), ul > li.nav li:nth-last-child(2) {
+  padding-top: 50px; }
+
+ul.nav li:nth-last-child(1), ul > li.nav li:nth-last-child(1) {
+  padding-top: 40px; }
+  ul.nav li:nth-last-child(1) a:after, ul > li.nav li:nth-last-child(1) a:after {
+    display: none; }
 
 /**
  * 5.0 - Utility Classes
