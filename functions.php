@@ -7,69 +7,100 @@
  * @package _s
  */
 
-if ( ! function_exists( '_s_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function _s_setup() {
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on _s, use a find and replace
-	 * to change '_s' to the name of your theme in all the template files.
+if ( ! function_exists( 'begonia_setup' ) ) :
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
 	 */
-	load_theme_textdomain( '_s', get_template_directory() . '/languages' );
+	function begonia_setup() {
 
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
+		/*
+		 * Make theme available for translation.
+		 * Translations can be filed in the /languages/ directory.
+		 */
+		load_theme_textdomain( 'begonia', get_template_directory() . '/languages' );
 
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
 
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-	 */
-	add_theme_support( 'post-thumbnails' );
+		/*
+		* Let WordPress manage the document title.
+		* By adding theme support, we declare that this theme does not use a
+		* hard-coded <title> tag in the document head, and expect WordPress to
+		* provide it for us.
+		*/
+		add_theme_support( 'title-tag' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', '_s' ),
-	) );
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+		 */
+		add_theme_support( 'post-thumbnails' );
+		add_image_size( 'begonia-masonry-image', 450, 9999, false );
+		add_image_size( 'begonia-single-image', 1024, 9999, false );
 
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	) );
+		// This theme uses wp_nav_menu() in three locations.
+		register_nav_menus( array(
+			'primary'   => __( 'Primary Menu', 'begonia' ),
+			'social'    => __( 'Social Menu', 'begonia' ),
+		) );
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+		/*
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
+		add_theme_support( 'html5', array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption'
+		) );
 
-	// Add theme support for selective refresh for widgets.
-	add_theme_support( 'customize-selective-refresh-widgets' );
-}
-endif;
-add_action( 'after_setup_theme', '_s_setup' );
+		/*
+		 * Enable support for custom logo.
+		 *
+		 */
+		add_theme_support( 'custom-logo', array(
+			'width'       => 1360,
+			'height'      => 600,
+			'flex-height' => true,
+			'header-text' => array(
+				'site-title',
+				'site-description-text',
+			)
+		) );
+
+		if ( ! function_exists( 'the_custom_logo' ) ) {
+			//in case we are on a WP version older than 4.5, try to use Jetpack's Site Logo feature
+			/**
+			 * Add theme support for site logo
+			 *
+			 * First, it's the image size we want to use for the logo thumbnails
+			 * Second, the 2 classes we want to use for the "Display Header Text" Customizer logic
+			 */
+			add_theme_support( 'site-logo', array(
+				'size'        => 'hive-site-logo',
+				'header-text' => array(
+					'site-title',
+					'site-description-text',
+				)
+			) );
+		}
+
+		add_image_size( 'begonia-site-logo', 1360, 600, false );
+
+		/*
+		 * Now some cleanup to remove features that we do not support
+		 */
+		remove_theme_support( 'custom-header' );
+	}
+endif; // begonia_setup
+
+add_action( 'after_setup_theme', 'begonia_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
