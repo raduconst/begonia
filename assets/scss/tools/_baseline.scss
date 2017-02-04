@@ -6,7 +6,6 @@ $baseline-debug:            false               !default;
 @if $baseline-debug == true {
     html {
         height: 100%;
-        background-image: linear-gradient(0deg, transparent 0%, transparent calc(100% - 1px), $baseline-grid-color calc(100% - 1px), $baseline-grid-color 100%);
         background-size: $baseline-unit $baseline-unit;
     }
 }
@@ -37,7 +36,7 @@ $baseline-debug:            false               !default;
             width: 100%;
             height: $units * 1rem;
 
-            background: rgba(adjust-hue(#F00, $units * 70), 0.5);
+            /*background: rgba(adjust-hue(#F00, $units * 70), 0.5); */
         }
     }
 }
