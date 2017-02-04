@@ -1,0 +1,36 @@
+.toolbar-navigation {
+  position: fixed;
+
+  top: 0.75em;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+
+  width: 80px;
+  height: 100%;
+
+  background: white;
+  z-index: 1;
+}
+
+.nav.nav--main {
+  display: flex;
+  flex-flow: column-reverse wrap;
+  align-items: center;
+}
+
+ul.nav li {
+  padding-top:124px
+}
+
+ul.nav li a {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -webkit-writing-mode: lr-tb;
+  -ms-writing-mode: lr-tb;
+  writing-mode: lr-tb;
+  float: left;
+  white-space: pre;
+}

@@ -3,8 +3,6 @@
  * The template for the lateral toolbar.
  * @package Begonia
  */ ?>
-	<div class="toolbar">
-		<div class="toolbar__head">
 			<nav id="social-navigation" class="toolbar-navigation" role="navigation">
 				<h5 class="screen-reader-text"><?php _e( 'Main navigation', 'begonia' ); ?></h5>
 				<?php
@@ -19,5 +17,3 @@
 				); ?>
 			</nav>
 			<!-- #main-navigation -->
-		</div>
-	</div>

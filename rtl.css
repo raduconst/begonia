@@ -721,6 +721,38 @@ small {
   position: relative;
   z-index: 1; }
 
+.toolbar-navigation {
+  position: fixed;
+  top: 0.75em;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 80px;
+  height: 100%;
+  background: white;
+  z-index: 1; }
+
+.nav.nav--main {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column-reverse wrap;
+      flex-flow: column-reverse wrap;
+  -ms-flex-align: center;
+      align-items: center; }
+
+ul.nav li {
+  padding-top: 124px; }
+
+ul.nav li a {
+  -webkit-transform: rotate(-270deg);
+  -moz-transform: rotate(-270deg);
+  -o-transform: rotate(-270deg);
+  -webkit-writing-mode: lr-tb;
+  -ms-writing-mode: lr-tb;
+  writing-mode: lr-tb;
+  float: right;
+  white-space: pre; }
+
 /**
  * 5.0 - Utility Classes
  */
@@ -816,5 +848,8 @@ html {
 
 section {
   padding: 20px 0; }
+
+.screen-reader-text {
+  display: none; }
 
 /*# sourceMappingURL=to.css.map */
