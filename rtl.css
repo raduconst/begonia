@@ -878,13 +878,14 @@ body {
 /**
  * 7.0 - Hacks and Overrides
  */
-html {
-  padding: 0 20px; }
-
 section {
   padding: 20px 0; }
 
 .screen-reader-text {
   display: none; }
+
+#page > header {
+  position: absolute;
+  padding: 80px; }
 
 /*# sourceMappingURL=to.css.map */

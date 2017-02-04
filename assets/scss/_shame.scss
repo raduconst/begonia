@@ -1,9 +1,5 @@
 // Nothing to see here. We do clean after ourselves
 
-html {
-    padding: 0 20px;
-}
-
 section {
     padding: 20px 0;
 }
@@ -14,3 +10,7 @@ section {
     display: none;
 }
 
+#page > header {
+    position: absolute;
+    padding: 80px;
+}
