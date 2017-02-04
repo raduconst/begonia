@@ -3,16 +3,21 @@
     font-weight: bold;
     text-transform: uppercase;
     @include baseline();
+    font-family: $headings-font;
 }
 
 .h0 {
     @extend %heading;
+    font-size: 200px;
     @extend %fs62 !optional;
+    margin-bottom: 80px;
 }
 
 %h1 {
     @extend %heading;
+    font-size: 50px;
     @extend %fs48 !optional;
+    margin-bottom: 48px;
 }
 
 %h2 {
@@ -22,20 +27,28 @@
 
 %h3 {
     @extend %heading;
+    font-size: 24px;
     @extend %fs32 !optional;
 }
 
 %h4 {
     @extend %heading;
+    font-size: 18px;
     @extend %fs20 !optional;
 }
 
 %h5 {
     @extend %heading;
+    font-size: 14px;
     @extend %fs16 !optional;
 }
 
 %h6 {
     @extend %heading;
+    font-size: 12px;
     @extend %fs13 !optional;
+}
+
+.lead {
+    font-size: 20px;
 }

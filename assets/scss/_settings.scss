@@ -16,6 +16,12 @@ $color-light-grey:      #F6F6F6;
 $color-smoke-grey:      #D1D1D1;
 $color-accent:          #0300FF;
 
+// fonts
+$headings-font:         'Overpass-Bold', sans-serif;;
+$body-font:             'Overpass-Light', sans-serif;;
+$meta-font:             'Overpass-Regular', sans-serif;;
+
+
 // Debug settings
 $debug:                 false;
 $baseline-debug:        $debug;

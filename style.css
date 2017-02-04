@@ -466,75 +466,6 @@ img[height] {
 /**
  * 2.0 - Base Styles
  */
-h6 {
-  font-size: 1.08333rem; }
-
-h5 {
-  font-size: 1.33333rem; }
-
-h4 {
-  font-size: 1.66667rem; }
-
-h3 {
-  font-size: 2.66667rem; }
-
-h2 {
-  font-size: 3.33333rem; }
-
-h1 {
-  font-size: 4rem; }
-
-.h0 {
-  font-size: 5.16667rem; }
-
-@media only screen and (max-width: 760px) {
-  h6 {
-    font-size: 1rem; }
-  h5 {
-    font-size: 1.25rem; }
-  h4 {
-    font-size: 1.58333rem; }
-  h3 {
-    font-size: 2.41667rem; }
-  h2 {
-    font-size: 2.91667rem; }
-  h1 {
-    font-size: 3.41667rem; }
-  .h0 {
-    font-size: 4.25rem; } }
-
-@media only screen and (max-width: 560px) {
-  h6 {
-    font-size: 0.91667rem; }
-  h5 {
-    font-size: 1.16667rem; }
-  h4 {
-    font-size: 1.41667rem; }
-  h3 {
-    font-size: 2.25rem; }
-  h2 {
-    font-size: 2.58333rem; }
-  h1 {
-    font-size: 2.91667rem; }
-  .h0 {
-    font-size: 3.66667rem; } }
-
-@media only screen and (max-width: 400px) {
-  h6 {
-    font-size: 0.91667rem; }
-  h5 {
-    font-size: 1.08333rem; }
-  h4 {
-    font-size: 1.33333rem; }
-  h3 {
-    font-size: 2.08333rem; }
-  h2 {
-    font-size: 2.33333rem; }
-  h1 {
-    font-size: 2.58333rem; }
-  .h0 {
-    font-size: 3.16667rem; } }
-
 /* Definition Lists */
 dl {
   display: -ms-flexbox;
@@ -586,10 +517,34 @@ table th, table td {
   display: block;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.25;
-  padding-top: calc(1rem - 0.265em);
-  padding-bottom: calc(1rem - 0.265em);
-  margin-bottom: 1rem; }
+  line-height: 1;
+  padding-top: calc(1rem - 0.14em);
+  padding-bottom: calc(1rem - 0.14em);
+  margin-bottom: 1rem;
+  font-family: "Overpass-Bold", sans-serif; }
+
+.h0 {
+  font-size: 200px;
+  margin-bottom: 80px; }
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 48px; }
+
+h3 {
+  font-size: 24px; }
+
+h4 {
+  font-size: 18px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  font-size: 12px; }
+
+.lead {
+  font-size: 20px; }
 
 html {
   font-size: 75%;
