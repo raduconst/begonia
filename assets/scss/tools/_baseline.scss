@@ -1,4 +1,4 @@
-$baseline-unit:             12px                !default;
+$baseline-unit:             16px                !default;
 $baseline-grid:             false               !default;
 $baseline-grid-color:       rgba(0,0,0,0.1)     !default;
 $baseline-debug:            false               !default;
@@ -10,7 +10,7 @@ $baseline-debug:            false               !default;
     }
 }
 
-@mixin baseline($baseline-font-size: 16px, $baseline-line-height: 1.25, $cap-height-ratio: 0.72, $units: 3) {
+@mixin baseline($baseline-font-size: 16px, $baseline-line-height: 1, $cap-height-ratio: 0.72, $units: 3) {
 
     $baseline-distance: ($baseline-line-height - $cap-height-ratio) / 2;
 

@@ -5,37 +5,52 @@
     @include baseline();
 }
 
+%margin-bottom{
+ margin-bottom: 48px;
+}
+
 .h0 {
     @extend %heading;
-    @extend %fs62 !optional;
+    font-size: 200px;
+    margin-bottom: 80px;
 }
 
 %h1 {
     @extend %heading;
-    @extend %fs48 !optional;
+    @extend %fs50 !optional;
+    @extend %margin-bottom;
 }
 
 %h2 {
     @extend %heading;
-    @extend %fs40 !optional;
+    @extend %fs32 !optional;
+    @extend %margin-bottom;
 }
 
 %h3 {
     @extend %heading;
-    @extend %fs32 !optional;
+    @extend %fs24 !optional;
+    @extend %margin-bottom;
 }
 
 %h4 {
     @extend %heading;
-    @extend %fs20 !optional;
+    @extend %fs18 !optional;
+    @extend %margin-bottom;
 }
 
 %h5 {
     @extend %heading;
-    @extend %fs16 !optional;
+    @extend %fs14 !optional;
+    margin-bottom: 32px;
 }
 
 %h6 {
     @extend %heading;
-    @extend %fs13 !optional;
+    @extend %fs12 !optional;
+    margin-bottom: 16px;
+}
+
+.lead {
+    font-size: 20px;
 }

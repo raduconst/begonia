@@ -7,7 +7,7 @@ $font-size:             16px;
 $line-height:           1.5;
 
 // baseline
-$baseline-unit:         12px;
+$baseline-unit:         16px;
 
 // colors
 $color-dark:            #313131;
@@ -15,6 +15,12 @@ $color-gray:            #757575;
 $color-light-grey:      #F6F6F6;
 $color-smoke-grey:      #D1D1D1;
 $color-accent:          #0300FF;
+
+// fonts
+$headings-font:         'Overpass', sans-serif;;
+$body-font:             'Overpass', sans-serif;;
+$meta-font:             'Overpass', sans-serif;;
+
 
 // Debug settings
 $debug:                 false;
@@ -40,13 +46,13 @@ $zindex: (
 $typeline-points:       0 1.2, 50 1.6, 200 1.8;
 $typeline-breakpoints:  760px 560px 400px;
 $typeline-rules: (
-    '%fs13': 13px,
-    '%fs16': 16px,
-    '%fs20': 20px,
+    '%fs12': 12px,
+    '%fs14': 14px,
+    '%fs18': 18px,
+    '%fs24': 24px,
     '%fs32': 32px,
-    '%fs40': 40px,
-    '%fs48': 48px,
-    '%fs62': 62px
+    '%fs50': 50px,
+    '%fs80': 80px
 );
 
 // misc
