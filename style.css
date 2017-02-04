@@ -826,6 +826,10 @@ generate utility classes that forces a certain width to the element the classes 
 /**
  * 6.0 - Layout
  */
+.site {
+  /* width: 120px; */
+  margin-left: 160px; }
+
 /**
  * 7.0 - Hacks and Overrides
  */
