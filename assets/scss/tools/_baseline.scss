@@ -36,7 +36,7 @@ $baseline-debug:            false               !default;
             width: 100%;
             height: $units * 1rem;
 
-            /*background: rgba(adjust-hue(#F00, $units * 70), 0.5); */
+            background: rgba(adjust-hue(#F00, $units * 70), 0.5);
         }
     }
 }
