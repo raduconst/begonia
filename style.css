@@ -444,7 +444,7 @@ template {
 body,
 h1, h2, h3, h4, h5, h6,
 blockquote, p, pre,
-dl, dd, ol, ul,
+dl, dd, ol, ol > li, ul, ul > li,
 figure,
 hr,
 fieldset, legend {
@@ -455,7 +455,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-ul, ol, li {
+ul, ul > li, ol, ol > li, li {
   list-style: none; }
 
 img[width],
@@ -541,7 +541,15 @@ dl {
         flex-basis: 66%; }
 
 /* Unordered Lists */
+ul, ul > li {
+  list-style-type: disc;
+  line-height: 24px; }
+
 /* Ordered Lists */
+ol, ol > li {
+  list-style-type: decimal;
+  line-height: 24px; }
+
 a:hover {
   text-decoration: underline; }
 
@@ -577,12 +585,13 @@ table th, table td {
   display: block;
   font-weight: bold;
   text-transform: uppercase;
+  color: #313131;
   line-height: 1;
   padding-top: calc(1rem - 0.14em);
   padding-bottom: calc(1rem - 0.14em);
   margin-bottom: 1rem; }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, .lead {
   margin-bottom: 48px; }
 
 .h0 {
@@ -597,6 +606,18 @@ h6 {
 
 .lead {
   font-size: 20px; }
+
+.dropcap {
+  float: left;
+  font-size: 85px;
+  font-weight: bold;
+  line-height: 40px;
+  margin-top: 0.25em;
+  margin-right: 0.10em; }
+
+p, a, ul, ul > li, li {
+  font-size: 17px;
+  color: #383C50; }
 
 html {
   font-size: 100%;
@@ -733,10 +754,10 @@ small {
   -ms-flex-align: center;
       align-items: center; }
 
-ul.nav li {
+ul.nav li, ul > li.nav li {
   padding-top: 124px; }
 
-ul.nav li a {
+ul.nav li a, ul > li.nav li a {
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
   -o-transform: rotate(270deg);

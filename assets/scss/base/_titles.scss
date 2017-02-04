@@ -2,6 +2,7 @@
     display: block;
     font-weight: bold;
     text-transform: uppercase;
+    color: $color-dark;
     @include baseline();
 }
 
@@ -53,4 +54,19 @@
 
 .lead {
     font-size: 20px;
+    @extend %margin-bottom;
+}
+
+.dropcap {
+    float: left;
+    font-size: 85px;
+    font-weight: bold;
+    line-height: 40px;
+    margin-top: 0.25em;
+    margin-right: 0.10em;
+}
+
+p, a, ul, li {
+    font-size: 17px;
+    color: #383C50;
 }
