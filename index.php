@@ -15,6 +15,10 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
+        <?php while ( have_posts() ) : the_post();
+	        get_template_part( 'template-parts/content', 'hero' );
+	        break;
+	        endwhile; ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -36,13 +40,13 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				if ( has_post_thumbnail() && ( true === $begonia_first_post ) ) {
-					get_template_part( 'template-parts/content', 'hero' );
+				if ( true === $begonia_first_post )  {
+					//get_template_part( 'template-parts/content', 'hero' );
 					$begonia_first_post = false;
 					continue;
 				}
 				get_template_part( 'template-parts/content', 'no_top' );
-				$begonia_first_post = false;
+				//$begonia_first_post = false;
 			endwhile;
 
 			the_posts_pagination();
