@@ -31,17 +31,18 @@
 
  */
 
-$card-padding:         16px                 !default;
-$card-background:      #F0F0F0              !default;
-$card-color:           #111                 !default;
+$card-padding:         40px                 !default;
+$card-background:      grey          !default;
+$card-color:           transparent          !default;
 $card-border-width:    1px                  !default;
 $card-border-style:    solid                !default;
 $card-border-color:    #DDDDDD              !default;
 $card-radius:          0                    !default;
 
 .c-card {
-    margin: 40px;
     height: 100%;
+    display: inline-block;
+    vertical-align: top;
 
     padding: $card-padding;
     color: $card-color;
@@ -88,44 +89,32 @@ $card-radius:          0                    !default;
 }
 
 /*
-.c-card--one-third {
-    width: 33.33%;
+.c-card:nth-child(4n-2), .c-card:nth-child(4n+1) {
+    flex-basis: 33%;
+    min-width: 410px;
 }
 
-.c-card--two-thirds {
-    width: 66.66%;
+.c-card:nth-child(4n), .c-card:nth-child(4n-1) {
+    flex-basis: 66%;
+    min-width: 1000px;
 }
-
 */
 
-/*
-.c-card:nth-child(4n), .c-card:nth-child(4n+3) {
-    flex-basis: 33%;
-    max-width: 410px;
+.c-card:nth-child(4n-2), .c-card:nth-child(4n+1) {
+    width: 33%;
 }
 
 
-.c-card:nth-child(4n+2), .c-card:nth-child(4n+3){
-    flex-basis: 66%;
+.c-card:nth-child(4n), .c-card:nth-child(4n-1) {
+    width: 66%;
 }
 
-*/
-
-
-.c-card:nth-child(4n+1){
-    flex-basis: 33%;
-    max-width: 410px;
+.c-card .entry-content {
+    max-width: 428px;
 }
 
-.c-card:nth-child(4n+2){
-    flex-basis: 66%;
-}
-
-.c-card:nth-child(4n+3){
-    flex-basis: 66%;
-}
-
-.c-card:nth-child(4n+4){
-    flex-basis: 33%;
-    max-width: 410px;
+article:nth-child(1) {
+    .c-hero__image {
+       width: 100vw !important;
+    }
 }

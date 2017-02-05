@@ -669,33 +669,6 @@ small {
 /**
  * 4.0 - Components
  */
-/*
-
-    HERO
-    ====
-
-
-    description:
-    ------------
-
-
-    expected markup:
-    ----------------
-    <div class="c-hero  c-hero--half">
-
-        <div class="c-hero__background" style="background-image: ... ;"></div>
-
-        <div class="c-hero__background">
-            <img class="c-hero__image" src="path/to/my-image.jpg">
-        </div>
-
-        <div class="c-hero__content">
-            ...
-        </div>
-
-    </div>
-
- */
 .c-hero {
   position: relative;
   display: -ms-flexbox;
@@ -877,11 +850,12 @@ ul.nav li:nth-last-child(1), ul > li.nav li:nth-last-child(1) {
 
  */
 .c-card {
-  margin: 40px;
   height: 100%;
-  padding: 16px;
-  color: #111;
-  background: #F0F0F0;
+  display: inline-block;
+  vertical-align: top;
+  padding: 40px;
+  color: transparent;
+  background: grey;
   border: 1px solid #DDDDDD; }
 
 .c-card__media img {
@@ -893,8 +867,8 @@ ul.nav li:nth-last-child(1), ul > li.nav li:nth-last-child(1) {
 
 .c-card--inverse {
   position: relative;
-  background: #111;
-  color: #F0F0F0; }
+  background: transparent;
+  color: grey; }
   .c-card--inverse .c-card__media {
     position: absolute;
     top: 0;
@@ -904,44 +878,27 @@ ul.nav li:nth-last-child(1), ul > li.nav li:nth-last-child(1) {
     object-fit: cover; }
 
 /*
-.c-card--one-third {
-    width: 33.33%;
-}
-
-.c-card--two-thirds {
-    width: 66.66%;
-}
-
-*/
-/*
-.c-card:nth-child(4n), .c-card:nth-child(4n+3) {
+.c-card:nth-child(4n-2), .c-card:nth-child(4n+1) {
     flex-basis: 33%;
-    max-width: 410px;
+    min-width: 410px;
 }
 
-
-.c-card:nth-child(4n+2), .c-card:nth-child(4n+3){
+.c-card:nth-child(4n), .c-card:nth-child(4n-1) {
     flex-basis: 66%;
+    min-width: 1000px;
 }
-
 */
-.c-card:nth-child(4n+1) {
-  -ms-flex-preferred-size: 33%;
-      flex-basis: 33%;
-  max-width: 410px; }
+.c-card:nth-child(4n-2), .c-card:nth-child(4n+1) {
+  width: 33%; }
 
-.c-card:nth-child(4n+2) {
-  -ms-flex-preferred-size: 66%;
-      flex-basis: 66%; }
+.c-card:nth-child(4n), .c-card:nth-child(4n-1) {
+  width: 66%; }
 
-.c-card:nth-child(4n+3) {
-  -ms-flex-preferred-size: 66%;
-      flex-basis: 66%; }
+.c-card .entry-content {
+  max-width: 428px; }
 
-.c-card:nth-child(4n+4) {
-  -ms-flex-preferred-size: 33%;
-      flex-basis: 33%;
-  max-width: 410px; }
+article:nth-child(1) .c-hero__image {
+  width: 100vw !important; }
 
 /**
  * 5.0 - Utility Classes
@@ -1031,20 +988,25 @@ generate utility classes that forces a certain width to the element the classes 
  * 6.0 - Layout
  */
 #content {
-  max-width: 1800px;
   display: block;
   margin: 0 40px; }
 
+/*
 .site-main {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+*/
+.site-main {
+  display: block;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto; }
 
 body {
-  margin-left: 80px; }
+  margin-left: 80px;
+  overflow-x: hidden; }
 
 /**
  * 7.0 - Hacks and Overrides
@@ -1055,13 +1017,4 @@ section {
 .screen-reader-text {
   display: none; }
 
-<<<<<<< HEAD
-=======
-/*
-#page > header {
-    position: absolute;
-    padding: 80px;
-}*/
-
->>>>>>> 9dc48a108a2769ba70ff9773df40419455227329
 /*# sourceMappingURL=style.css.map */
