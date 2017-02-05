@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <header class="c-hero  c-hero--two-thirds entry-header">
+        <header class="c-hero  c-hero--full entry-header">
                 <?php if ( has_post_thumbnail() ) : ?>
                     <div class="c-hero__background">
                         <?php
@@ -25,11 +25,7 @@
 
                     <div class="c-hero__wrap">
                         <?php endif;
-                        if ( is_single() ) :
                             the_title( '<h1 class="c-hero__entry-title">', '</h1>' );
-                        else :
-                            the_title( '<h2 class="c-hero__entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-                        endif;
                         if ( 'post' === get_post_type() ) : ?>
                             <div class="c-hero__entry-meta">
                                 <?php _s_posted_on(); ?>
