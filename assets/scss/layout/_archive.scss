@@ -1,14 +1,7 @@
 #content {
   display: block;
-  margin: 0 40px;
 }
-/*
-.site-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-*/
+
 
 .site-main {
   display: block;
@@ -16,3 +9,9 @@
   width: 100%;
   margin: 0 auto;
 }
+
+
+.home article:first-of-type {
+  width: 100%;
+}
+

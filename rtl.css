@@ -673,13 +673,13 @@ small {
   position: relative;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
   min-height: 100vh;
+  margin-bottom: 40px;
+  padding-bottom: 80px;
   text-align: center; }
 
 .c-hero--half {
@@ -691,11 +691,18 @@ small {
 .c-hero--two-thirds {
   min-height: 66.666666vh; }
 
+.c-hero-full {
+  min-height: 100vh; }
+
 .c-hero__wrap {
-  right: 0px;
-  padding: 0px 95px;
   height: 100%;
-  text-align: right; }
+  text-align: right;
+  margin-right: 95px; }
+
+.c-hero__entry-meta .hero_categories a, .c-hero__entry-meta .posted-on a, .c-hero_read_more a {
+  text-transform: uppercase;
+  color: #0300FF;
+  text-decoration: none; }
 
 .c-hero__background {
   position: absolute;
@@ -728,44 +735,61 @@ small {
       order: 2;
   margin-bottom: 0; }
 
+h1.c-hero__entry-title {
+  color: #FFFFFF; }
+
 .c-hero__content {
   -ms-flex-order: 3;
-      order: 3;
-  margin-bottom: 48px; }
+      order: 3; }
   .c-hero__content p {
-    color: #F6F6F6; }
+    color: #FFFFFF;
+    width: 428px;
+    margin-bottom: 48px; }
 
 .c-hero__entry-meta {
   -ms-flex-order: 1;
       order: 1;
   margin-bottom: 32px; }
+  .c-hero__entry-meta .hero_categories, .c-hero__entry-meta .posted-on {
+    display: inline-block; }
+    .c-hero__entry-meta .hero_categories a, .c-hero__entry-meta .posted-on a {
+      font-size: 14px; }
 
 .c-hero_read_more {
-  width: 40%;
+  width: 300px;
   background: #0300FF;
   padding: 20px;
   -ms-flex-order: 4;
       order: 4; }
   .c-hero_read_more a {
-    text-transform: uppercase;
-    color: #F6F6F6;
-    text-decoration: none; }
-
-.hero_categories {
-  display: inline-block; }
-  .hero_categories a {
-    text-transform: uppercase;
-    color: #0300FF;
-    text-decoration: none; }
+    color: #FFFFFF; }
 
 .site-branding {
   position: absolute;
   z-index: 1;
   margin-right: 80px; }
 
-h1.site-title a {
+.site-title a {
   color: white;
   text-decoration: none; }
+
+.site-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: baseline;
+      align-items: baseline;
+  text-align: right;
+  background-color: #0300FF;
+  padding: 80px; }
+
+section.widget {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%; }
+
+h2.widget-title {
+  color: #FFFFFF; }
 
 .toolbar-navigation {
   position: fixed;
@@ -988,8 +1012,11 @@ generate utility classes that forces a certain width to the element the classes 
  * 6.0 - Layout
  */
 #content {
+
   display: block;
-  margin: 0 40px; }
+  margin: 0 40px;
+}
+
 
 /*
 .site-main {
@@ -1003,6 +1030,9 @@ generate utility classes that forces a certain width to the element the classes 
   max-width: 1440px;
   width: 100%;
   margin: 0 auto; }
+
+.home article:first-of-type {
+  width: 100%; }
 
 body {
   margin-right: 80px;
