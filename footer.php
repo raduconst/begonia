@@ -13,7 +13,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" style="background-color: dodgerblue" role="contentinfo">
+	<footer id="colophon" class="site-footer" role="contentinfo">
 		<?php dynamic_sidebar('footer-sidebar'); ?>
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', '_s' ), 'WordPress' ); ?></a>

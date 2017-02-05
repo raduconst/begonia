@@ -773,6 +773,24 @@ h1.c-hero__entry-title {
   color: white;
   text-decoration: none; }
 
+.site-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: baseline;
+      align-items: baseline;
+  text-align: left;
+  background-color: #0300FF;
+  padding: 80px; }
+
+section.widget {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%; }
+
+h2.widget-title {
+  color: #FFFFFF; }
+
 .toolbar-navigation {
   position: fixed;
   top: 0.75em;
