@@ -1,14 +1,11 @@
-//
-//.hero__content {
-//  position: absolute;
-//  width: 100%;
-//
-//  .entry-thumbnail img {
-//    width: 100%;
-//  }
-//
-//  .entry-header {
-//    height: 160px;
-//  }
-//
-//}
+#content {
+  max-width: 1800px;
+  display: block;
+  margin: 0 40px;
+}
+
+.site-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

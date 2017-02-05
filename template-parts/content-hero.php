@@ -7,7 +7,7 @@
  * @package Begonia
  */
 
-//var_dump( 'hero' ); ?>
+?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <header class="c-hero  c-hero--two-thirds entry-header">

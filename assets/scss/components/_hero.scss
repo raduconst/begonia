@@ -1,31 +1,3 @@
-/*
-
-    HERO
-    ====
-
-
-    description:
-    ------------
-
-
-    expected markup:
-    ----------------
-    <div class="c-hero  c-hero--half">
-
-        <div class="c-hero__background" style="background-image: ... ;"></div>
-
-        <div class="c-hero__background">
-            <img class="c-hero__image" src="path/to/my-image.jpg">
-        </div>
-
-        <div class="c-hero__content">
-            ...
-        </div>
-
-    </div>
-
- */
-
 .c-hero {
     position: relative;
 
