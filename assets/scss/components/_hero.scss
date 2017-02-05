@@ -6,7 +6,7 @@
     flex-flow: column nowrap;
 
     min-height: 100vh;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     padding-bottom: 80px;
 
     text-align: center;
@@ -77,12 +77,12 @@ h1.c-hero__entry-title {
     }
 }
 
-.c-hero__entry-meta {
+.c-hero__entry-meta, .entry-meta{
     order: 1;
     margin-bottom: 32px;
 
     .hero_categories, .posted-on {
-        display: inline-block;
+        display: inline;
         a {
             @extend %link-style;
             font-size: 14px;
@@ -90,12 +90,13 @@ h1.c-hero__entry-title {
     }
 }
 
-.c-hero_read_more {
-    width: 300px;
+.c-hero_read_more,
+.hero_read_more {
+    max-width: 300px;
     background: $color-accent;
     padding: 20px;
     order: 4;
-
+    margin-top: 48px;
     a {
         @extend %link-style;
         color: $color-white;
