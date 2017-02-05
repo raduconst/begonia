@@ -785,6 +785,105 @@ ul.nav li:nth-last-child(1), ul > li.nav li:nth-last-child(1) {
   ul.nav li:nth-last-child(1) a:after, ul > li.nav li:nth-last-child(1) a:after {
     display: none; }
 
+/*
+
+    Card
+    ====
+
+
+    description:
+    ------------
+    a distinct peace piece of content usually displayed in lists (decks of cards)
+    the card components should visually define its own space (border, padding)
+    the space between cards should come from its container (grid, deck, masonry) or utility classes
+
+
+    expected markup:
+    ----------------
+    <div class="c-card  c-card--inverse">
+
+        <div class="c-card__media">
+            <img src="path/to/my-image.jpg">
+            ...
+        </div>
+
+        <h1 class="c-card__title"> ... </h1>
+        <p class="c-card__subtitle"> ... </p>
+
+        <footer class="c-card__footer">
+            ...
+        </footer>
+
+    </div>
+
+ */
+.c-card {
+  margin: 40px;
+  height: 100%;
+  padding: 16px;
+  color: #111;
+  background: #F0F0F0;
+  border: 1px solid #DDDDDD; }
+
+.c-card__media img {
+  width: 100%;
+  display: block; }
+
+.c-card__footer {
+  margin-top: auto; }
+
+.c-card--inverse {
+  position: relative;
+  background: #111;
+  color: #F0F0F0; }
+  .c-card--inverse .c-card__media {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+/*
+.c-card--one-third {
+    width: 33.33%;
+}
+
+.c-card--two-thirds {
+    width: 66.66%;
+}
+
+*/
+/*
+.c-card:nth-child(4n), .c-card:nth-child(4n+3) {
+    flex-basis: 33%;
+    max-width: 410px;
+}
+
+
+.c-card:nth-child(4n+2), .c-card:nth-child(4n+3){
+    flex-basis: 66%;
+}
+
+*/
+.c-card:nth-child(4n+1) {
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  max-width: 410px; }
+
+.c-card:nth-child(4n+2) {
+  -ms-flex-preferred-size: 66%;
+      flex-basis: 66%; }
+
+.c-card:nth-child(4n+3) {
+  -ms-flex-preferred-size: 66%;
+      flex-basis: 66%; }
+
+.c-card:nth-child(4n+4) {
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  max-width: 410px; }
+
 /**
  * 5.0 - Utility Classes
  */
@@ -872,6 +971,19 @@ generate utility classes that forces a certain width to the element the classes 
 /**
  * 6.0 - Layout
  */
+#content {
+  max-width: 1800px;
+  display: block;
+  margin: 0 40px; }
+
+.site-main {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+
 body {
   margin-right: 80px; }
 
@@ -884,8 +996,10 @@ section {
 .screen-reader-text {
   display: none; }
 
+/*
 #page > header {
-  position: absolute;
-  padding: 80px; }
+    position: absolute;
+    padding: 80px;
+}*/
 
 /*# sourceMappingURL=to.css.map */

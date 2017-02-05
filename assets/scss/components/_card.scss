@@ -40,8 +40,7 @@ $card-border-color:    #DDDDDD              !default;
 $card-radius:          0                    !default;
 
 .c-card {
-    display: flex;
-    flex-direction: column;
+    margin: 40px;
     height: 100%;
 
     padding: $card-padding;
@@ -86,4 +85,47 @@ $card-radius:          0                    !default;
 
 .c-card--stack {
     // @todo see WUpdates 'surface' class
+}
+
+/*
+.c-card--one-third {
+    width: 33.33%;
+}
+
+.c-card--two-thirds {
+    width: 66.66%;
+}
+
+*/
+
+/*
+.c-card:nth-child(4n), .c-card:nth-child(4n+3) {
+    flex-basis: 33%;
+    max-width: 410px;
+}
+
+
+.c-card:nth-child(4n+2), .c-card:nth-child(4n+3){
+    flex-basis: 66%;
+}
+
+*/
+
+
+.c-card:nth-child(4n+1){
+    flex-basis: 33%;
+    max-width: 410px;
+}
+
+.c-card:nth-child(4n+2){
+    flex-basis: 66%;
+}
+
+.c-card:nth-child(4n+3){
+    flex-basis: 66%;
+}
+
+.c-card:nth-child(4n+4){
+    flex-basis: 33%;
+    max-width: 410px;
 }

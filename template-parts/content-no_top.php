@@ -7,9 +7,9 @@
  * @package Begonia
  */
 
-var_dump('no_top'); ?>
+?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class($class='c-card'); ?>>
     <header class="entry-header">
 		<?php if ( has_post_thumbnail() ) : ?>
             <div class="entry-thumbnail">
