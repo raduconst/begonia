@@ -669,44 +669,17 @@ small {
 /**
  * 4.0 - Components
  */
-/*
-
-    HERO
-    ====
-
-
-    description:
-    ------------
-
-
-    expected markup:
-    ----------------
-    <div class="c-hero  c-hero--half">
-
-        <div class="c-hero__background" style="background-image: ... ;"></div>
-
-        <div class="c-hero__background">
-            <img class="c-hero__image" src="path/to/my-image.jpg">
-        </div>
-
-        <div class="c-hero__content">
-            ...
-        </div>
-
-    </div>
-
- */
 .c-hero {
   position: relative;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
   min-height: 100vh;
+  margin-bottom: 40px;
+  padding-bottom: 80px;
   text-align: center; }
 
 .c-hero--half {
@@ -719,10 +692,9 @@ small {
   min-height: 66.666666vh; }
 
 .c-hero__wrap {
-  left: 0px;
-  padding: 0px 95px;
   height: 100%;
-  text-align: left; }
+  text-align: left;
+  margin-left: 95px; }
 
 .c-hero__background {
   position: absolute;
@@ -757,10 +729,11 @@ small {
 
 .c-hero__content {
   -ms-flex-order: 3;
-      order: 3;
-  margin-bottom: 48px; }
+      order: 3; }
   .c-hero__content p {
-    color: #F6F6F6; }
+    color: #F6F6F6;
+    width: 40%;
+    margin-bottom: 48px; }
 
 .c-hero__entry-meta {
   -ms-flex-order: 1;
@@ -768,7 +741,7 @@ small {
   margin-bottom: 32px; }
 
 .c-hero_read_more {
-  width: 40%;
+  width: 20%;
   background: #0300FF;
   padding: 20px;
   -ms-flex-order: 4;
@@ -788,6 +761,7 @@ small {
 .site-branding {
   position: absolute;
   z-index: 1;
+  margin-top: 80px;
   margin-left: 80px; }
 
 h1.site-title a {
@@ -1032,8 +1006,7 @@ generate utility classes that forces a certain width to the element the classes 
  */
 #content {
   max-width: 1800px;
-  display: block;
-  margin: 0 40px; }
+  display: block; }
 
 .site-main {
   display: -ms-flexbox;
@@ -1055,13 +1028,4 @@ section {
 .screen-reader-text {
   display: none; }
 
-<<<<<<< HEAD
-=======
-/*
-#page > header {
-    position: absolute;
-    padding: 80px;
-}*/
-
->>>>>>> 9dc48a108a2769ba70ff9773df40419455227329
 /*# sourceMappingURL=style.css.map */
