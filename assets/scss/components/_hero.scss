@@ -86,6 +86,7 @@ h1.c-hero__entry-title {
         a {
             @extend %link-style;
             font-size: 14px;
+            font-weight: bold;
         }
     }
 }
@@ -97,6 +98,7 @@ h1.c-hero__entry-title {
     padding: 20px;
     order: 4;
     margin-top: 48px;
+
     a {
         @extend %link-style;
         color: $color-white;

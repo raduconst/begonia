@@ -755,7 +755,8 @@ h1.c-hero__entry-title {
   .c-hero__entry-meta .hero_categories, .c-hero__entry-meta .posted-on, .entry-meta .hero_categories, .entry-meta .posted-on {
     display: inline; }
     .c-hero__entry-meta .hero_categories a, .c-hero__entry-meta .posted-on a, .entry-meta .hero_categories a, .entry-meta .posted-on a {
-      font-size: 14px; }
+      font-size: 14px;
+      font-weight: bold; }
 
 .c-hero_read_more,
 .hero_read_more {
@@ -933,10 +934,11 @@ article:nth-child(1) .c-hero__image {
 
 .separator:after {
   content: "";
-  border-left: 3px solid #0300FF;
-  width: 20px;
+  border-top: 2px solid #0300FF;
+  padding: 2px 25px;
+  margin: 4px 20px;
   display: inline-block;
-  transform: rotate(0deg); }
+  transform: rotate(180deg); }
 
 /**
  * 5.0 - Utility Classes
@@ -1034,6 +1036,17 @@ generate utility classes that forces a certain width to the element the classes 
   width: 100%;
   margin: 0 auto;
   padding: 0 60px; }
+
+.navigation {
+  display: -ms-flexbox;
+  display: flex; }
+  .navigation.pagination {
+    font-weight: bold; }
+    .navigation.pagination a {
+      font-size: 16px;
+      color: #0300FF;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 body {
   margin-left: 80px;

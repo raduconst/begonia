@@ -26,7 +26,7 @@ function _s_posted_on() { ?>
 			} ?>
 	</div>
 
-	<?php echo '<span class="separator"> - </span>'; ?>
+	<?php echo '<span class="separator">  </span>'; ?>
 
 		<?php
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
