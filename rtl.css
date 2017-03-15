@@ -805,7 +805,7 @@ h2.widget-title {
   display: block;
   width: 80px;
   height: 100%;
-  background: white;
+  background: #f6f6f6;
   z-index: 1; }
 
 .nav.nav--main {
@@ -1035,7 +1035,7 @@ generate utility classes that forces a certain width to the element the classes 
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 60px; }
+  padding: 0px; }
 
 .navigation {
   display: -ms-flexbox;
@@ -1051,6 +1051,21 @@ generate utility classes that forces a certain width to the element the classes 
 body {
   margin-right: 80px;
   overflow-x: hidden; }
+
+.single {
+  /* Temporary */ }
+  .single .entry-thumbnail {
+    margin-bottom: 0px; }
+    .single .entry-thumbnail img {
+      height: 300px; }
+  .single .entry-meta {
+    margin: 75px 80px 40px 0; }
+  .single .entry-title, .single .entry-content {
+    margin-right: 80px; }
+  .single .entry-content p > img {
+    margin: 80px 0px 80px 80px; }
+  .single div#comments {
+    display: none; }
 
 /**
  * 7.0 - Hacks and Overrides

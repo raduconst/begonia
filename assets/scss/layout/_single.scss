@@ -1,0 +1,25 @@
+.single {
+  .entry-thumbnail {
+    margin-bottom: 0px;
+    img {
+      height: 300px;
+    }
+  }
+  .entry-meta {
+    margin: 75px 0 40px 80px;
+  }
+
+  .entry-title, .entry-content {
+    margin-left: 80px;
+  }
+
+  .entry-content p > img {
+    margin: 80px 80px 80px 0px;
+  }
+
+  /* Temporary */
+  div#comments {
+    display: none;
+  }
+
+}
