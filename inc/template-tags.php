@@ -55,10 +55,10 @@ function _s_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', '_s' ) );
-		if ( $categories_list && _s_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', '_s' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-		}
+//		$categories_list = get_the_category_list( esc_html__( ', ', '_s' ) );
+//		if ( $categories_list && _s_categorized_blog() ) {
+//			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', '_s' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+//		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', '_s' ) );
@@ -128,3 +128,32 @@ function _s_category_transient_flusher() {
 }
 add_action( 'edit_category', '_s_category_transient_flusher' );
 add_action( 'save_post',     '_s_category_transient_flusher' );
+
+
+function begonia_single_post_navigation() {
+	echo '<div class="navigation_posts">';
+
+	$prevPost = get_previous_post( true );
+	if ( $prevPost ) { ?>
+
+        <div class="nav-box previous">
+
+		<?php $prevthumbnail = get_the_post_thumbnail( $prevPost->ID, array( 100, 100 ) ); ?>
+
+		<?php previous_post_link( '%link', "$prevthumbnail  <p>%title</p> <p>Prev</p>", true ); ?>
+
+        </div><?php }
+
+	$nextPost = get_next_post( true );
+	if ( $nextPost ) { ?>
+
+        <div class="nav-box next">
+
+		<?php $nextthumbnail = get_the_post_thumbnail( $nextPost->ID, array( 100, 100 ) ); ?>
+
+		<?php next_post_link( '%link', "$nextthumbnail  <p>%title</p> <p>Next</p>", true ); ?>
+
+        </div><?php }
+
+	echo '</div>';
+}
