@@ -770,6 +770,9 @@ h1.c-hero__entry-title {
   .hero_read_more a {
     color: #FFFFFF; }
 
+.site-description {
+  display: none; }
+
 .site-branding {
   position: absolute;
   z-index: 1;
@@ -782,13 +785,15 @@ h1.c-hero__entry-title {
 .site-footer {
   display: -ms-flexbox;
   display: flex;
+  float: left;
   -ms-flex-direction: row;
       flex-direction: row;
   -ms-flex-align: baseline;
       align-items: baseline;
   text-align: left;
   background-color: #0300FF;
-  padding: 80px; }
+  padding: 80px;
+  width: 100%; }
 
 section.widget {
   -ms-flex-preferred-size: 100%;
@@ -1037,16 +1042,26 @@ generate utility classes that forces a certain width to the element the classes 
   margin: 0 auto;
   padding: 0px; }
 
-.navigation {
-  display: -ms-flexbox;
-  display: flex; }
-  .navigation.pagination {
-    font-weight: bold; }
-    .navigation.pagination a {
-      font-size: 16px;
-      color: #0300FF;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+nav.pagination {
+  display: block;
+  width: 100%;
+  padding: 40px 0 80px 0;
+  font-weight: bold;
+  font-size: 16px;
+  color: #0300FF; }
+  nav.pagination .nav-links {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center; }
+    nav.pagination .nav-links .page-numbers {
+      -ms-flex-line-pack: center;
+          align-content: center; }
+    nav.pagination .nav-links .next {
+      font-size: 32px;
+      color: #313131;
+      -ms-flex-item-align: end;
+          align-self: flex-end; }
 
 body {
   margin-left: 80px;
@@ -1054,12 +1069,22 @@ body {
 
 .single {
   /* Temporary */ }
+  .single .site-main {
+    max-width: none; }
   .single .entry-thumbnail {
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    max-height: 300px;
+    overflow: hidden; }
     .single .entry-thumbnail img {
-      height: 300px; }
+      object-fit: cover;
+      height: 300px;
+      width: 100%;
+      object-position: 50% 50%; }
   .single .entry-meta {
     margin: 75px 0 40px 80px; }
+  .single .entry-content {
+    max-width: 1440px;
+    margin: 0 auto; }
   .single .entry-title, .single .entry-content {
     margin-left: 80px; }
   .single .entry-content p > img {

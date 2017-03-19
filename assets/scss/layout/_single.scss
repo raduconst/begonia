@@ -1,15 +1,30 @@
 .single {
+ .site-main {
+   max-width: none;
+ }
+
   .entry-thumbnail {
     margin-bottom: 0px;
+    max-height: 300px;
+    overflow: hidden;
+
     img {
+      object-fit: cover;
       height: 300px;
+      width: 100%;
+      object-position: 50% 50%;
     }
   }
+
   .entry-meta {
     margin: 75px 0 40px 80px;
   }
 
-  .entry-title, .entry-content {
+  .entry-content {
+    max-width: 1440px;
+    margin:0 auto;
+  }
+.entry-title, .entry-content {
     margin-left: 80px;
   }
 

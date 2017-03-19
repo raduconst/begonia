@@ -10,14 +10,25 @@
   padding:0px;
 }
 
-.navigation {
-  display: flex;
-  &.pagination {
-   font-weight: bold;
-   a {
-     font-size: 16px;
-     color: $color-accent;
-     justify-content:space-between;
+nav.pagination {
+  display: block;
+  width: 100%;
+  padding: 40px 0 80px 0;
+  font-weight: bold;
+  font-size: 16px;
+  color: $color-accent;
+
+  .nav-links {
+    display: flex;
+    align-content: center;
+    .page-numbers {
+      align-content: center;
+    }
+    .next {
+      font-size: 32px;
+      color: #313131;
+      align-self: flex-end;
+    }
+
   }
- }
 }
