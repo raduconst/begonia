@@ -48,4 +48,7 @@
 	<footer class="entry-footer">
 		<?php _s_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+
+	<?php begonia_single_post_navigation(); ?>
+
 </article><!-- #post-## -->
