@@ -1091,7 +1091,7 @@ body {
   .single .entry-content {
     max-width: 600px;
     margin: 0 auto;
-    display: inline-block; }
+    display: block; }
     .single .entry-content img {
       max-width: calc(600px + 100%); }
   .single .entry-title, .single .entry-content {
@@ -1101,10 +1101,13 @@ body {
   .single div#comments {
     display: none; }
   .single .entry-footer {
+    display: inline-block;
     margin: 80px 0px 80px 80px; }
     .single .entry-footer .tags-links {
       color: #0300FF;
       text-transform: uppercase; }
+  .single .navigation_posts {
+    display: inline-block; }
 
 /**
  * 7.0 - Hacks and Overrides

@@ -23,7 +23,7 @@
   .entry-content {
     max-width: 600px;
     margin:0 auto;
-    display: inline-block;
+    display: block;
 
     img {
       max-width: calc(600px + 100%);
@@ -43,6 +43,7 @@
   }
 
   .entry-footer {
+    display: inline-block;
     margin: 80px 0px 80px 80px;
 
     .tags-links {
@@ -54,5 +55,8 @@
 
        }
     }
+  }
+  .navigation_posts {
+    display: inline-block;
   }
 }
