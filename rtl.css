@@ -701,7 +701,7 @@ small {
   margin-right: 95px; }
 
 .c-hero__entry-meta .hero_categories a, .c-hero__entry-meta .posted-on a, .entry-meta .hero_categories a, .entry-meta .posted-on a, .c-hero_read_more a,
-.hero_read_more a {
+.hero_read_more a, nav.pagination .nav-links, nav.pagination .nav-links .prev, .single .entry-footer .tags-links, .single .entry-footer .tags-links a {
   text-transform: uppercase;
   color: #0300FF;
   text-decoration: none; }
@@ -1050,18 +1050,24 @@ nav.pagination {
   font-size: 16px;
   color: #0300FF; }
   nav.pagination .nav-links {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-line-pack: center;
-        align-content: center; }
+    text-align: center;
+    text-transform: none;
+    line-height: 40px; }
     nav.pagination .nav-links .page-numbers {
-      -ms-flex-line-pack: center;
-          align-content: center; }
+      color: #0300FF; }
+    nav.pagination .nav-links .page-numbers:not(.next):not(.prev) {
+      letter-spacing: 5px; }
     nav.pagination .nav-links .next {
       font-size: 32px;
       color: #313131;
-      -ms-flex-item-align: end;
-          align-self: flex-end; }
+      float: left; }
+    nav.pagination .nav-links .prev {
+      text-transform: none;
+      font-size: 32px;
+      color: #313131;
+      float: right; }
+    nav.pagination .nav-links .current {
+      color: #313131; }
 
 body {
   margin-right: 80px;
@@ -1083,14 +1089,22 @@ body {
   .single .entry-meta {
     margin: 75px 80px 40px 0; }
   .single .entry-content {
-    max-width: 1440px;
-    margin: 0 auto; }
+    max-width: 600px;
+    margin: 0 auto;
+    display: inline-block; }
+    .single .entry-content img {
+      max-width: calc(600px + 100%); }
   .single .entry-title, .single .entry-content {
     margin-right: 80px; }
   .single .entry-content p > img {
     margin: 80px 0px 80px 80px; }
   .single div#comments {
     display: none; }
+  .single .entry-footer {
+    margin: 80px 80px 80px 0px; }
+    .single .entry-footer .tags-links {
+      color: #0300FF;
+      text-transform: uppercase; }
 
 /**
  * 7.0 - Hacks and Overrides

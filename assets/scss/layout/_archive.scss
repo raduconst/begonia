@@ -19,16 +19,32 @@ nav.pagination {
   color: $color-accent;
 
   .nav-links {
-    display: flex;
-    align-content: center;
+    text-align: center;
+    @extend %link-style;
+    text-transform: none;
+    line-height: 40px;
+
     .page-numbers {
-      align-content: center;
+      color: $color-accent;
+    }
+
+    .page-numbers:not(.next,.prev) {
+      letter-spacing: 5px;
     }
     .next {
       font-size: 32px;
       color: #313131;
-      align-self: flex-end;
+      float: right;
     }
-
+    .prev {
+      @extend %link-style;
+      text-transform: none;
+      font-size: 32px;
+      color: #313131;
+      float: left;
+    }
+    .current {
+      color: #313131;
+    }
   }
 }
