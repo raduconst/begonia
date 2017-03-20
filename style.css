@@ -780,7 +780,10 @@ h1.c-hero__entry-title {
 
 .site-title a {
   color: white;
-  text-decoration: none; }
+  text-decoration: none;
+  text-transform: none;
+  line-height: 100px;
+  margin-top: 80px; }
 
 .site-footer {
   display: -ms-flexbox;
@@ -793,7 +796,10 @@ h1.c-hero__entry-title {
   text-align: left;
   background-color: #0300FF;
   padding: 80px;
-  width: 100%; }
+  width: 100%;
+  color: #FFFFFF; }
+  .site-footer a {
+    color: #FFFFFF; }
 
 section.widget {
   -ms-flex-preferred-size: 100%;

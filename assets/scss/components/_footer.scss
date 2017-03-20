@@ -7,6 +7,11 @@
   background-color: $color-accent;
   padding: 80px;
   width: 100%;
+  color: $color-white;
+
+  a {
+    color: $color-white;
+  }
 }
 
 section.widget {
@@ -16,7 +21,3 @@ section.widget {
   h2.widget-title {
     color: $color-white;
   }
-
-.site-info {
-
-}
