@@ -39,7 +39,13 @@ get_header(); ?>
 				$begonia_post_archive_counter++;
 				if ( 1 === $begonia_post_archive_counter % get_option('posts_per_page') )
 					get_template_part( 'template-parts/content', 'hero' );
-				else
+				else if ( 2 === $begonia_post_archive_counter % get_option('posts_per_page') ) {
+					echo '<div class="main-posts">';
+					get_template_part( 'template-parts/content', 'no_top' );
+				} else if ( ( $begonia_post_archive_counter - 1 ) === $begonia_post_archive_counter % get_option('posts_per_page') ) {
+					get_template_part( 'template-parts/content', 'no_top' );
+					echo '</div>';
+				} else
 					get_template_part( 'template-parts/content', 'no_top' );
 			endwhile;
 
