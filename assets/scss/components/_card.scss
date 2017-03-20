@@ -100,13 +100,13 @@ $card-radius:          0                    !default;
 }
 */
 
-.c-card:nth-child(4n-2), .c-card:nth-child(4n+1) {
-    width: 33%;
+.c-card:nth-child(4n-2), .c-card:nth-child(4n-1) {
+    width: 66%;
 }
 
 
-.c-card:nth-child(4n), .c-card:nth-child(4n-1) {
-    width: 66%;
+.c-card:nth-child(4n), .c-card:nth-child(4n+1) {
+    width: 33%;
 }
 
 .c-card .entry-content {

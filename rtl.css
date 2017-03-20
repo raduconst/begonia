@@ -928,11 +928,11 @@ ul.nav li:nth-last-child(1), ul > li.nav li:nth-last-child(1) {
     min-width: 1000px;
 }
 */
-.c-card:nth-child(4n-2), .c-card:nth-child(4n+1) {
-  width: 33%; }
-
-.c-card:nth-child(4n), .c-card:nth-child(4n-1) {
+.c-card:nth-child(4n-2), .c-card:nth-child(4n-1) {
   width: 66%; }
+
+.c-card:nth-child(4n), .c-card:nth-child(4n+1) {
+  width: 33%; }
 
 .c-card .entry-content {
   max-width: 428px; }
@@ -1042,7 +1042,9 @@ generate utility classes that forces a certain width to the element the classes 
   display: block; }
 
 .site-main {
-  display: block;
+  display: block; }
+
+.main-posts {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
