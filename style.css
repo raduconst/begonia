@@ -701,7 +701,7 @@ small {
   margin-left: 95px; }
 
 .c-hero__entry-meta .hero_categories a, .c-hero__entry-meta .posted-on a, .entry-meta .hero_categories a, .entry-meta .posted-on a, .c-hero_read_more a,
-.hero_read_more a, nav.pagination .nav-links, nav.pagination .nav-links .prev, .single .entry-footer .tags-links, .single .entry-footer .tags-links a {
+.hero_read_more a, nav.pagination .nav-links, nav.pagination .nav-links .prev, .single .entry-footer .tags-links, .single .entry-footer .tags-links a, .single .navigation_posts .nav-box a {
   text-transform: uppercase;
   color: #0300FF;
   text-decoration: none; }
@@ -1108,6 +1108,19 @@ body {
       text-transform: uppercase; }
   .single .navigation_posts {
     display: inline-block; }
+    .single .navigation_posts .nav-box {
+      display: inline-block; }
+      .single .navigation_posts .nav-box.previous {
+        margin-right: 32px; }
+      .single .navigation_posts .nav-box a .prev-title, .single .navigation_posts .nav-box a .next-title {
+        font-size: 32px;
+        margin-bottom: 32px;
+        text-transform: none;
+        color: #313131; }
+      .single .navigation_posts .nav-box a .prev, .single .navigation_posts .nav-box a .next {
+        text-transform: uppercase;
+        color: #0300FF;
+        font-weight: bold; }
 
 /**
  * 7.0 - Hacks and Overrides

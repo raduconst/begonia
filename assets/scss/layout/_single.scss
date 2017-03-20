@@ -58,5 +58,29 @@
   }
   .navigation_posts {
     display: inline-block;
+
+    .nav-box {
+      display: inline-block;
+
+      &.previous {
+        margin-right: 32px;
+      }
+      a {
+        @extend %link-style;
+
+        .prev-title, .next-title {
+          font-size: 32px;
+          margin-bottom: 32px;
+          text-transform: none;
+          color: #313131;
+
+        }
+        .prev, .next {
+          text-transform: uppercase;
+          color: $color-accent;
+          font-weight: bold;
+        }
+      }
+    }
   }
 }
