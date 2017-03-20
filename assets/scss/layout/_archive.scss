@@ -10,7 +10,7 @@
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding:0px;
+  padding-left:50px;
 }
 nav.pagination {
   display: block;
@@ -25,6 +25,7 @@ nav.pagination {
     @extend %link-style;
     text-transform: none;
     line-height: 40px;
+    margin: 0 80px;
 
     .page-numbers {
       color: $color-accent;
@@ -47,6 +48,7 @@ nav.pagination {
     }
     .current {
       color: #313131;
+      font-size: 17px;
     }
   }
 }

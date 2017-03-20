@@ -917,17 +917,6 @@ ul.nav li:nth-last-child(1), ul > li.nav li:nth-last-child(1) {
     height: 100%;
     object-fit: cover; }
 
-/*
-.c-card:nth-child(4n-2), .c-card:nth-child(4n+1) {
-    flex-basis: 33%;
-    min-width: 410px;
-}
-
-.c-card:nth-child(4n), .c-card:nth-child(4n-1) {
-    flex-basis: 66%;
-    min-width: 1000px;
-}
-*/
 .c-card:nth-child(4n-2), .c-card:nth-child(4n-1) {
   width: 66%; }
 
@@ -1048,7 +1037,7 @@ generate utility classes that forces a certain width to the element the classes 
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 0px; }
+  padding-right: 50px; }
 
 nav.pagination {
   display: block;
@@ -1060,7 +1049,8 @@ nav.pagination {
   nav.pagination .nav-links {
     text-align: center;
     text-transform: none;
-    line-height: 40px; }
+    line-height: 40px;
+    margin: 0 80px; }
     nav.pagination .nav-links .page-numbers {
       color: #0300FF; }
     nav.pagination .nav-links .page-numbers:not(.next):not(.prev) {
@@ -1075,7 +1065,8 @@ nav.pagination {
       color: #313131;
       float: right; }
     nav.pagination .nav-links .current {
-      color: #313131; }
+      color: #313131;
+      font-size: 17px; }
 
 body {
   margin-right: 80px;
