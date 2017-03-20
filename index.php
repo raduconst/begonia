@@ -15,10 +15,6 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-        <?php while ( have_posts() ) : the_post();
-	        get_template_part( 'template-parts/content', 'hero' );
-	        break;
-	        endwhile; ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -29,10 +25,10 @@ get_header(); ?>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
 
-			<?php
+				<?php
 			endif;
 
-			$begonia_first_post = true;
+			$begonia_post_archive_counter = 0;
 			while ( have_posts() ) : the_post();
 
 				/*
@@ -40,13 +36,11 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				if ( true === $begonia_first_post )  {
-					//get_template_part( 'template-parts/content', 'hero' );
-					$begonia_first_post = false;
-					continue;
-				}
-				get_template_part( 'template-parts/content', 'no_top' );
-				//$begonia_first_post = false;
+				$begonia_post_archive_counter++;
+				if ( 1 === $begonia_post_archive_counter % get_option('posts_per_page') )
+					get_template_part( 'template-parts/content', 'hero' );
+				else
+					get_template_part( 'template-parts/content', 'no_top' );
 			endwhile;
 
 			the_posts_pagination();
