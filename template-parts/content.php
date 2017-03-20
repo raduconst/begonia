@@ -30,10 +30,11 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php
+	<div class="single-post-content">
+		<div class="entry-content">
+			<?php
 			the_content( sprintf(
-				/* translators: %s: Name of current post. */
+			/* translators: %s: Name of current post. */
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', '_s' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
@@ -42,12 +43,13 @@
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
 				'after'  => '</div>',
 			) );
-		?>
-	</div><!-- .entry-content -->
+			?>
+		</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php _s_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+		<footer class="entry-footer">
+			<?php _s_entry_footer(); ?>
+		</footer><!-- .entry-footer -->
+	</div>
 
 	<?php begonia_single_post_navigation(); ?>
 

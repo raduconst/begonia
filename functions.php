@@ -60,6 +60,8 @@ if ( ! function_exists( 'begonia_setup' ) ) :
 			'caption'
 		) );
 
+		add_image_size( 'begonia-navigation-thumbnails', 236, 9999, false );
+
 		/*
 		 * Enable support for custom logo.
 		 *

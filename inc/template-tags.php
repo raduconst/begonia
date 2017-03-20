@@ -136,24 +136,24 @@ function begonia_single_post_navigation() {
 	$prevPost = get_previous_post( true );
 	if ( $prevPost ) { ?>
 
-        <div class="nav-box previous">
+		<div class="nav-box previous">
 
-		<?php $prevthumbnail = get_the_post_thumbnail( $prevPost->ID, array( 100, 100 ) ); ?>
+		<?php $prevthumbnail = get_the_post_thumbnail( $prevPost->ID, 'begonia-navigation-thumbnails' ); ?>
 
 		<?php previous_post_link( '%link', "$prevthumbnail  <div class='prev-title'>%title</div> <div class='prev'>Prev</div>", true ); ?>
 
-        </div><?php }
+		</div><?php }
 
 	$nextPost = get_next_post( true );
 	if ( $nextPost ) { ?>
 
-        <div class="nav-box next">
+		<div class="nav-box next">
 
-		<?php $nextthumbnail = get_the_post_thumbnail( $nextPost->ID, array( 100, 100 ) ); ?>
+		<?php $nextthumbnail = get_the_post_thumbnail( $nextPost->ID, 'begonia-navigation-thumbnails' ); ?>
 
-		<?php next_post_link( '%link', "$nextthumbnail  <div class='next-title'>%title</div> <div class='next'>Next</div>", true ); ?>
+		<?php next_post_link( '%link', "$nextthumbnail <div class='next-title'>%title</div> <div class='next'>Next</div>", true ); ?>
 
-        </div><?php }
+		</div><?php }
 
 	echo '</div>';
 }
