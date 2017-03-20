@@ -701,7 +701,7 @@ small {
   margin-left: 95px; }
 
 .c-hero__entry-meta .hero_categories a, .c-hero__entry-meta .posted-on a, .entry-meta .hero_categories a, .entry-meta .posted-on a, .c-hero_read_more a,
-.hero_read_more a, nav.pagination .nav-links, nav.pagination .nav-links .prev, .single .entry-footer .tags-links, .single .entry-footer .tags-links a, .single .navigation_posts .nav-box a {
+.hero_read_more a, nav.pagination .nav-links, nav.pagination .nav-links .prev, .single .entry-footer .tags-links a, .single .navigation_posts .nav-box a {
   text-transform: uppercase;
   color: #0300FF;
   text-decoration: none; }
@@ -922,11 +922,11 @@ ul.nav li:nth-last-child(1), ul > li.nav li:nth-last-child(1) {
     min-width: 1000px;
 }
 */
-.c-card:nth-child(4n-1), .c-card:nth-child(4n+2) {
-  width: 66%; }
-
-.c-card:nth-child(4n+1), .c-card:nth-child(4n) {
+.c-card:nth-child(4n-2), .c-card:nth-child(4n+1) {
   width: 33%; }
+
+.c-card:nth-child(4n), .c-card:nth-child(4n-1) {
+  width: 66%; }
 
 .c-card .entry-content {
   max-width: 428px; }
@@ -1105,7 +1105,12 @@ body {
     margin: 80px 0px 80px 80px; }
     .single .entry-footer .tags-links {
       color: #0300FF;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      word-spacing: 5px;
+      font-weight: 500;
+      font-size: 14px; }
+      .single .entry-footer .tags-links a {
+        font-size: 14px; }
   .single .navigation_posts {
     display: inline-block; }
     .single .navigation_posts .nav-box {
@@ -1120,7 +1125,8 @@ body {
       .single .navigation_posts .nav-box a .prev, .single .navigation_posts .nav-box a .next {
         text-transform: uppercase;
         color: #0300FF;
-        font-weight: bold; }
+        font-weight: 500;
+        font-size: 14px; }
 
 /**
  * 7.0 - Hacks and Overrides

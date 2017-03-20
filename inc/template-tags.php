@@ -61,7 +61,7 @@ function _s_entry_footer() {
 //		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', '_s' ) );
+		$tags_list = get_the_tag_list( '', esc_html__( ' ', '_s' ) );
 		if ( $tags_list ) {
 			printf( '<span class="tags-links">' . esc_html__( 'Tags: %1$s', '_s' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
@@ -140,7 +140,7 @@ function begonia_single_post_navigation() {
 
 		<?php $prevthumbnail = get_the_post_thumbnail( $prevPost->ID, array( 100, 100 ) ); ?>
 
-		<?php previous_post_link( '%link', "$prevthumbnail  <div class='prev-title'>%title</div> <div clas='prev'>Prev</div>", true ); ?>
+		<?php previous_post_link( '%link', "$prevthumbnail  <div class='prev-title'>%title</div> <div class='prev'>Prev</div>", true ); ?>
 
         </div><?php }
 
