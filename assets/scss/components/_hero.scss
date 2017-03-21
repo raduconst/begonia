@@ -93,15 +93,17 @@ h1.c-hero__entry-title {
 
 .c-hero_read_more,
 .hero_read_more {
-    max-width: 300px;
     background: $color-accent;
-    padding: 20px;
     order: 4;
     margin-top: 48px;
+    max-width: 300px;
 
     a {
         @extend %link-style;
         color: $color-white;
+        display: block;
+        width: 100%;
+        padding: 20px;
     }
 
     &:before {

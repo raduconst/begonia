@@ -701,7 +701,7 @@ small {
   margin-right: 95px; }
 
 .c-hero__entry-meta .hero_categories a, .c-hero__entry-meta .posted-on a, .entry-meta .hero_categories a, .entry-meta .posted-on a, .c-hero_read_more a,
-.hero_read_more a, nav.pagination .nav-links, nav.pagination .nav-links .prev, .single .entry-footer .tags-links a, .single .navigation_posts .nav-box a {
+.hero_read_more a, .toolbar-navigation .nav--main .menu-item a, nav.pagination .nav-links, nav.pagination .nav-links .prev, .single-post .single-post-content .entry-footer .tags-links a, .single-post .navigation_posts .nav-box a {
   text-transform: uppercase;
   color: #0300FF;
   text-decoration: none; }
@@ -760,15 +760,17 @@ h1.c-hero__entry-title {
 
 .c-hero_read_more,
 .hero_read_more {
-  max-width: 300px;
   background: #0300FF;
-  padding: 20px;
   -ms-flex-order: 4;
       order: 4;
-  margin-top: 48px; }
+  margin-top: 48px;
+  max-width: 300px; }
   .c-hero_read_more a,
   .hero_read_more a {
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    display: block;
+    width: 100%;
+    padding: 20px; }
 
 .site-description {
   display: none; }
@@ -810,53 +812,43 @@ h2.widget-title {
 
 .toolbar-navigation {
   position: fixed;
+  width: 100vh;
+  height: 80px;
   top: 0.75em;
   right: 0;
   bottom: 0;
   display: block;
-  width: 80px;
-  height: 100%;
   background: #f6f6f6;
-  z-index: 1; }
-
-.nav.nav--main {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: column-reverse wrap;
-      flex-flow: column-reverse wrap;
-  -ms-flex-align: center;
-      align-items: center; }
-
-ul.nav li, ul > li.nav li {
-  padding-top: 124px;
-  list-style: none; }
-
-ul.nav li a, ul > li.nav li a {
-  -webkit-transform: rotate(-270deg);
-  -moz-transform: rotate(-270deg);
-  -o-transform: rotate(-270deg);
-  -webkit-writing-mode: lr-tb;
-  -ms-writing-mode: lr-tb;
-  writing-mode: lr-tb;
-  float: right;
-  text-decoration: none;
-  white-space: pre;
-  margin-bottom: 20px; }
-  ul.nav li a:after, ul > li.nav li a:after {
-    content: "";
-    border-bottom: 3px solid #0300FF;
-    display: inline-block;
-    padding-right: 45px;
-    margin-right: 20px;
-    transform: rotate(0deg); }
-
-ul.nav li:nth-last-child(2), ul > li.nav li:nth-last-child(2) {
-  padding-top: 50px; }
-
-ul.nav li:nth-last-child(1), ul > li.nav li:nth-last-child(1) {
-  padding-top: 40px; }
-  ul.nav li:nth-last-child(1) a:after, ul > li.nav li:nth-last-child(1) a:after {
-    display: none; }
+  z-index: 1;
+  -webkit-transform-origin: right top;
+  -webkit-transform: rotate(90deg) translateX(100%);
+  transform-origin: right top;
+  transform: rotate(90deg) translateX(100%); }
+  .toolbar-navigation .nav--main {
+    display: block;
+    margin: 0 auto;
+    padding-left: 80px; }
+    .toolbar-navigation .nav--main .menu-item {
+      list-style: none;
+      margin-left: 15px;
+      float: left;
+      height: 100%;
+      line-height: 75px; }
+      .toolbar-navigation .nav--main .menu-item a {
+        font-size: 24px;
+        line-height: 36px;
+        white-space: nowrap;
+        text-transform: none; }
+      .toolbar-navigation .nav--main .menu-item:after {
+        content: "";
+        border-bottom: 3px solid #0300FF;
+        display: inline-block;
+        width: 50px;
+        vertical-align: middle;
+        margin-right: 15px;
+        margin-top: -10px; }
+    .toolbar-navigation .nav--main :nth-child(1):after {
+      display: none; }
 
 /*
 
@@ -1042,6 +1034,8 @@ generate utility classes that forces a certain width to the element the classes 
 nav.pagination {
   display: block;
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 40px 0 80px 0;
   font-weight: bold;
   font-size: 16px;
@@ -1072,60 +1066,71 @@ body {
   margin-right: 80px;
   overflow-x: hidden; }
 
-.single {
+.page .site-content {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto; }
+
+.single-post .site-main {
+  max-width: 100%;
+  margin: 0 auto; }
+
+.single-post .entry-thumbnail {
+  margin-bottom: 0px;
+  max-height: 300px;
+  overflow: hidden; }
+  .single-post .entry-thumbnail img {
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+    object-position: 50% 50%; }
+
+.single-post .entry-title, .single-post .entry-content {
+  margin-right: 80px; }
+
+.single-post .entry-meta {
+  margin: 75px 80px 40px 0; }
+
+.single-post .single-post-content {
+  max-width: 600px;
+  padding-left: 80px;
+  margin: 0 auto;
+  display: inline-block;
   /* Temporary */ }
-  .single .site-main {
-    max-width: none; }
-  .single .entry-thumbnail {
-    margin-bottom: 0px;
-    max-height: 300px;
-    overflow: hidden; }
-    .single .entry-thumbnail img {
-      object-fit: cover;
-      height: 300px;
-      width: 100%;
-      object-position: 50% 50%; }
-  .single .entry-meta {
-    margin: 75px 80px 40px 0; }
-  .single .entry-content {
-    max-width: 600px;
-    margin: 0 auto;
-    display: block; }
-    .single .entry-content img {
-      max-width: calc(600px + 100%); }
-  .single .entry-title, .single .entry-content {
-    margin-right: 80px; }
-  .single .entry-content p > img {
+  .single-post .single-post-content .entry-content img {
+    max-width: calc(600px + 100%); }
+  .single-post .single-post-content .entry-content p > img {
     margin: 80px 0px 80px 80px; }
-  .single div#comments {
+  .single-post .single-post-content div#comments {
     display: none; }
-  .single .entry-footer {
+  .single-post .single-post-content .entry-footer {
     display: inline-block;
     margin: 80px 80px 80px 0px; }
-    .single .entry-footer .tags-links {
+    .single-post .single-post-content .entry-footer .tags-links {
       color: #0300FF;
       text-transform: uppercase;
       word-spacing: 5px;
       font-weight: 500;
       font-size: 14px; }
-      .single .entry-footer .tags-links a {
+      .single-post .single-post-content .entry-footer .tags-links a {
         font-size: 14px; }
-  .single .navigation_posts {
+
+.single-post .navigation_posts {
+  display: inline-block; }
+  .single-post .navigation_posts .nav-box {
     display: inline-block; }
-    .single .navigation_posts .nav-box {
-      display: inline-block; }
-      .single .navigation_posts .nav-box.previous {
-        margin-left: 32px; }
-      .single .navigation_posts .nav-box a .prev-title, .single .navigation_posts .nav-box a .next-title {
-        font-size: 32px;
-        margin-bottom: 32px;
-        text-transform: none;
-        color: #313131; }
-      .single .navigation_posts .nav-box a .prev, .single .navigation_posts .nav-box a .next {
-        text-transform: uppercase;
-        color: #0300FF;
-        font-weight: 500;
-        font-size: 14px; }
+    .single-post .navigation_posts .nav-box.previous {
+      margin-left: 32px; }
+    .single-post .navigation_posts .nav-box a .prev-title, .single-post .navigation_posts .nav-box a .next-title {
+      font-size: 32px;
+      margin-bottom: 32px;
+      text-transform: none;
+      color: #313131; }
+    .single-post .navigation_posts .nav-box a .prev, .single-post .navigation_posts .nav-box a .next {
+      text-transform: uppercase;
+      color: #0300FF;
+      font-weight: 500;
+      font-size: 14px; }
 
 /**
  * 7.0 - Hacks and Overrides
