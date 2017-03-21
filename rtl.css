@@ -526,6 +526,13 @@ h1, .entry-title a {
   h1, .entry-title a {
     font-size: 31px; } }
 
+dl,
+ul,
+ul > li,
+ol,
+ol > li {
+  margin-right: 10px; }
+
 /* Definition Lists */
 dl {
   display: -ms-flexbox;
@@ -712,9 +719,14 @@ small {
   right: 0;
   width: 100%;
   height: 100%; }
-  .c-hero__background[style*="background-image"] {
-    background-size: cover;
-    background-position: center; }
+  .c-hero__background:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3); }
 
 .c-hero__image {
   width: 100%;
@@ -730,7 +742,7 @@ small {
       justify-content: left;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
-  z-index: 1; }
+  z-index: 3; }
 
 .c-hero__entry-title {
   -ms-flex-order: 2;
@@ -777,7 +789,7 @@ h1.c-hero__entry-title {
 
 .site-branding {
   position: absolute;
-  z-index: 1;
+  z-index: 4;
   margin-right: 80px; }
 
 .site-title a {
@@ -821,9 +833,9 @@ h2.widget-title {
   background: #f6f6f6;
   z-index: 1;
   -webkit-transform-origin: right top;
-  -webkit-transform: rotate(90deg) translateX(100%);
+  -webkit-transform: rotate(90deg) translateX(99%);
   transform-origin: right top;
-  transform: rotate(90deg) translateX(100%); }
+  transform: rotate(90deg) translateX(99%); }
   .toolbar-navigation .nav--main {
     display: block;
     margin: 0 auto;
@@ -833,7 +845,8 @@ h2.widget-title {
       margin-left: 15px;
       float: left;
       height: 100%;
-      line-height: 75px; }
+      line-height: 75px;
+      margin-right: 0; }
       .toolbar-navigation .nav--main .menu-item a {
         font-size: 24px;
         line-height: 36px;
@@ -1066,10 +1079,19 @@ body {
   margin-right: 80px;
   overflow-x: hidden; }
 
+.page .site-title a {
+  color: #0300FF; }
+
+.page .site-header {
+  height: 300px; }
+
 .page .site-content {
   max-width: 1440px;
   width: 100%;
-  margin: 0 auto; }
+  margin: 80px 80px; }
+
+.single-post .site-title a {
+  color: #0300FF; }
 
 .single-post .site-main {
   max-width: 100%;
@@ -1084,12 +1106,21 @@ body {
     height: 300px;
     width: 100%;
     object-position: 50% 50%; }
+  .single-post .entry-thumbnail:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    height: 300px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3); }
 
-.single-post .entry-title, .single-post .entry-content {
-  margin-right: 80px; }
+.single-post .entry-title {
+  margin-right: 80px;
+  margin-top: 39px; }
 
 .single-post .entry-meta {
-  margin: 75px 80px 40px 0; }
+  margin: 75px 80px 30px 0; }
 
 .single-post .single-post-content {
   max-width: 600px;
@@ -1097,8 +1128,10 @@ body {
   margin: 0 auto;
   display: inline-block;
   /* Temporary */ }
-  .single-post .single-post-content .entry-content img {
-    max-width: calc(600px + 100%); }
+  .single-post .single-post-content .entry-content {
+    margin-right: 80px; }
+    .single-post .single-post-content .entry-content img {
+      max-width: calc(600px + 100%); }
   .single-post .single-post-content .entry-content p > img {
     margin: 80px 0px 80px 80px; }
   .single-post .single-post-content div#comments {
