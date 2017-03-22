@@ -27,28 +27,37 @@ get_header(); ?>
 
 				<?php
 			endif;
-
+			$begonia_sticky_posts = count(get_option('sticky_posts'));
 			$begonia_post_archive_counter = 0;
 			while ( have_posts() ) : the_post();
-
 				/*
 				 * Include the Post-Format-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
 				$begonia_post_archive_counter++;
-				if ( 1 === $begonia_post_archive_counter % get_option('posts_per_page') )
-					get_template_part( 'template-parts/content', 'hero' );
-				else if ( 2 === $begonia_post_archive_counter % get_option('posts_per_page') ) {
-					echo '<div class="main-posts">';
-					get_template_part( 'template-parts/content', 'no_top' );
-				} else if ( 0 === $begonia_post_archive_counter % get_option('posts_per_page') ) {
-					get_template_part( 'template-parts/content', 'no_top' );
-					echo '</div>';
-				} else
-					get_template_part( 'template-parts/content', 'no_top' );
+				switch ($begonia_post_archive_counter % get_option('posts_per_page') ) {
+					case '1':
+						if ( ( $begonia_post_archive_counter !== 1 ) && is_home() && is_front_page() ) {
+							get_template_part( 'template-parts/content', 'no_top' );
+							continue;
+						}
+						get_template_part( 'template-parts/content', 'hero' );
+						break;
+					case '2':
+						if ( ( $begonia_post_archive_counter !== 2 ) & is_home() && is_front_page() ) {
+							get_template_part( 'template-parts/content', 'no_top' );
+							continue;
+						}
+						echo '<div class="main-posts">';
+						get_template_part( 'template-parts/content', 'no_top' );
+						break;
+					default:
+						get_template_part( 'template-parts/content', 'no_top' );
+						break;
+				}
 			endwhile;
-
+			echo '</div>';
 			the_posts_pagination();
 
 		else :
