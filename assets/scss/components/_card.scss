@@ -88,17 +88,6 @@ $card-radius:          0                    !default;
     // @todo see WUpdates 'surface' class
 }
 
-/*
-.c-card:nth-child(4n-2), .c-card:nth-child(4n+1) {
-    flex-basis: 33%;
-    min-width: 410px;
-}
-
-.c-card:nth-child(4n), .c-card:nth-child(4n-1) {
-    flex-basis: 66%;
-    min-width: 1000px;
-}
-*/
 
 .c-card:nth-child(4n-2), .c-card:nth-child(4n-1) {
     width: 66%;
