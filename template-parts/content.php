@@ -47,7 +47,7 @@
 		</div><!-- .entry-content -->
 
 		<footer class="entry-footer">
-			<?php _s_entry_footer(); ?>
+			<?php begonia_entry_footer(); ?>
 		</footer><!-- .entry-footer -->
 	</div>
 
