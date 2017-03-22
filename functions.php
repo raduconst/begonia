@@ -1,10 +1,10 @@
 <?php
 /**
- * _s functions and definitions
+ * Begonia functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package _s
+ * @package Begonia
  */
 
 if ( ! function_exists( 'begonia_setup' ) ) :
@@ -41,6 +41,7 @@ if ( ! function_exists( 'begonia_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'begonia-masonry-image', 450, 9999, false );
 		add_image_size( 'begonia-single-image', 1024, 9999, false );
+		add_image_size( 'begonia-navigation-thumbnails', 236, 9999, false );
 
 		// This theme uses wp_nav_menu() in three locations.
 		register_nav_menus( array(
@@ -59,46 +60,6 @@ if ( ! function_exists( 'begonia_setup' ) ) :
 			'gallery',
 			'caption'
 		) );
-
-		add_image_size( 'begonia-navigation-thumbnails', 236, 9999, false );
-
-		/*
-		 * Enable support for custom logo.
-		 *
-		 */
-		add_theme_support( 'custom-logo', array(
-			'width'       => 1360,
-			'height'      => 600,
-			'flex-height' => true,
-			'header-text' => array(
-				'site-title',
-				'site-description-text',
-			)
-		) );
-
-		if ( ! function_exists( 'the_custom_logo' ) ) {
-			//in case we are on a WP version older than 4.5, try to use Jetpack's Site Logo feature
-			/**
-			 * Add theme support for site logo
-			 *
-			 * First, it's the image size we want to use for the logo thumbnails
-			 * Second, the 2 classes we want to use for the "Display Header Text" Customizer logic
-			 */
-			add_theme_support( 'site-logo', array(
-				'size'        => 'hive-site-logo',
-				'header-text' => array(
-					'site-title',
-					'site-description-text',
-				)
-			) );
-		}
-
-		add_image_size( 'begonia-site-logo', 1360, 600, false );
-
-		/*
-		 * Now some cleanup to remove features that we do not support
-		 */
-		remove_theme_support( 'custom-header' );
 	}
 endif; // begonia_setup
 
@@ -137,23 +98,14 @@ add_action( 'widgets_init', 'begonia_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function _s_scripts() {
-	wp_enqueue_style( '_s-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+function begonia_scripts() {
+	wp_enqueue_style( 'begonia-style', get_stylesheet_uri() );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', '_s_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
+add_action( 'wp_enqueue_scripts', 'begonia_scripts' );
 
 /**
  * Custom template tags for this theme.
@@ -164,13 +116,3 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';

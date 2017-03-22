@@ -17,7 +17,7 @@
             </div>
 		<?php endif; ?>
         <div class="entry-meta">
-			<?php _s_posted_on(); ?>
+			<?php begonia_posted_on(); ?>
         </div><!-- .entry-meta -->
         <?php  if ( is_single() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -35,12 +35,12 @@
 			<?php
 			the_content( sprintf(
 			/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', '_s' ), array( 'span' => array( 'class' => array() ) ) ),
+				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'begonia' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'begonia' ),
 				'after'  => '</div>',
 			) );
 			?>

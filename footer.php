@@ -16,9 +16,9 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<?php dynamic_sidebar('footer-sidebar'); ?>
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', '_s' ), 'WordPress' ); ?></a>
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'begonia' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'begonia' ), __('Begonia', 'begonia' ) ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', '_s' ), '_s', '<a href="https://automattic.com/" rel="designer">Automattic</a>' ); ?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s %3$s %4$s.', 'begonia' ), __('Begonia', 'begonia'), __('<a href="', 'begonia'), esc_url('https://pixelgrade.com/', 'begonia'), __('" rel="designer">Pixelgrade</a>', 'begonia') ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
