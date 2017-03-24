@@ -1,15 +1,15 @@
 /*
 Theme Name: Begonia
-Theme URI: https://demos.pixelgrade.com/boilerplate/
+Theme URI: https://demos.pixelgrade.com/begonia/
 Author: PixelGrade
 Author URI: https://pixelgrade.com
 Description: Some lovely description of your theme here.
 Version: 0.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: boilerplate
+Text Domain: begonia
 Domain Path: /languages/
-Tags:
+Tags: grid-layout, blog, photography
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
@@ -1042,7 +1042,7 @@ generate utility classes that forces a certain width to the element the classes 
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding-right: 50px; }
+  padding: 0 40px; }
 
 nav.pagination {
   display: block;
