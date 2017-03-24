@@ -13,6 +13,13 @@
   padding: 0 40px;
 }
 
+.sticky {
+ img {
+   border-top: 3px solid $color-accent;
+   border-bottom: 3px solid $color-accent;
+ }
+}
+
 nav.pagination {
   display: block;
   width: 100%;
