@@ -34,12 +34,15 @@
   }
 
   .entry-title {
-    margin-left: 80px;
-    margin-top: 39px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 80px;
   }
 
   .entry-meta {
-    margin: 75px 0 30px 80px;
+    padding: 75px 0 30px 80px;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 
   .single-post-content {
