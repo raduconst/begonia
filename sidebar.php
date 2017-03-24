@@ -7,11 +7,18 @@
  * @package _s
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+if ( ! is_active_sidebar( 'footer-sidebar' ) ) {
 	return;
 }
 ?>
 
-<aside id="secondary" class="widget-area" role="complementary">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</aside><!-- #secondary -->
+<div class="widgets-area"> <!-- widgets-area -->
+	<?php
+	if ( is_active_sidebar( 'footer-sidebar' ) ) : ?>
+
+		<div id="footer-sidebar" class="footer-area widget-area" role="complementary">
+			<?php dynamic_sidebar( 'footer-sidebar' ); ?>
+		</div><!-- #footer-sidebar -->
+
+	<?php endif; ?>
+</div>
