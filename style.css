@@ -707,7 +707,7 @@ small {
   margin-left: 95px; }
 
 .c-hero__entry-meta .hero_categories a, .c-hero__entry-meta .posted-on a, .entry-meta .hero_categories a, .entry-meta .posted-on a, .c-hero_read_more a,
-.hero_read_more a, .toolbar-navigation .nav--main .menu-item a, nav.pagination .nav-links, nav.pagination .nav-links .prev, .single-post .single-post-content .entry-footer .tags-links a, .single-post .navigation_posts .nav-box a, .comments-area .comment-list .reply a {
+.hero_read_more a, .toolbar-navigation .nav--main .menu-item a, nav.pagination .nav-links, nav.pagination .nav-links .prev, .single-post .single-post-content .footer-section .entry-footer .tags-links a, .single-post .single-post-content .navigation_posts .nav-box a, .comments-area .comment-list .reply a {
   text-transform: uppercase;
   color: #0300FF;
   text-decoration: none; }
@@ -820,6 +820,29 @@ section.widget {
 
 h2.widget-title {
   color: #FFFFFF; }
+
+.widgets-area {
+  background-color: #0300FF;
+  padding: 80px 80px 0px 80px;
+  width: 100%;
+  margin: 0 auto; }
+  .widgets-area .widget-area {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    padding: 0 40px; }
+    .widgets-area .widget-area p, .widgets-area .widget-area a, .widgets-area .widget-area ul, .widgets-area .widget-area ul > li, .widgets-area .widget-area ul > li, .widgets-area .widget-area ul > li > li, .widgets-area .widget-area li,
+    .widgets-area .widget-area .calendar_wrap {
+      color: white; }
+    .widgets-area .widget-area .widget {
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+      padding: 40px; }
 
 .toolbar-navigation {
   position: fixed;
@@ -1141,36 +1164,46 @@ body {
       max-width: calc(600px + 100%); }
   .single-post .single-post-content .entry-content p > img {
     margin: 80px 80px 80px 0px; }
-  .single-post .single-post-content .entry-footer {
-    display: inline-block;
-    margin: 80px 0px 80px 80px; }
-    .single-post .single-post-content .entry-footer .tags-links {
+  .single-post .single-post-content .footer-section {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    max-width: 1440px;
+    width: 100%;
+    -ms-flex: 100%;
+        flex: 100%;
+    padding: 0 80px;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: baseline;
+        align-items: baseline;
+    margin-top: -200px;
+    margin-bottom: 80px; }
+    .single-post .single-post-content .footer-section .entry-footer .tags-links {
       color: #0300FF;
       text-transform: uppercase;
       word-spacing: 5px;
       font-weight: 500;
       font-size: 14px; }
-      .single-post .single-post-content .entry-footer .tags-links a {
+      .single-post .single-post-content .footer-section .entry-footer .tags-links a {
         font-size: 14px; }
-
-.single-post .navigation_posts {
-  display: inline-block;
-  float: right;
-  margin-top: -150px; }
-  .single-post .navigation_posts .nav-box {
-    display: inline-block; }
-    .single-post .navigation_posts .nav-box.previous {
-      margin-right: 32px; }
-    .single-post .navigation_posts .nav-box a .prev-title, .single-post .navigation_posts .nav-box a .next-title {
-      font-size: 32px;
-      margin-bottom: 32px;
-      text-transform: none;
-      color: #313131; }
-    .single-post .navigation_posts .nav-box a .prev, .single-post .navigation_posts .nav-box a .next {
-      text-transform: uppercase;
-      color: #0300FF;
-      font-weight: 500;
-      font-size: 14px; }
+  .single-post .single-post-content .navigation_posts {
+    max-width: 600px;
+    padding-left: 45px; }
+    .single-post .single-post-content .navigation_posts .nav-box {
+      display: inline-block;
+      max-width: 49%; }
+      .single-post .single-post-content .navigation_posts .nav-box a .prev-title, .single-post .single-post-content .navigation_posts .nav-box a .next-title {
+        font-size: 32px;
+        margin-bottom: 32px;
+        text-transform: none;
+        color: #313131; }
+      .single-post .single-post-content .navigation_posts .nav-box a .prev, .single-post .single-post-content .navigation_posts .nav-box a .next {
+        text-transform: uppercase;
+        color: #0300FF;
+        font-weight: 500;
+        font-size: 14px; }
 
 .wp-caption,
 .gallery {

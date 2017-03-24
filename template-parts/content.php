@@ -46,11 +46,12 @@
 			?>
 		</div><!-- .entry-content -->
 
-		<footer class="entry-footer">
-			<?php begonia_entry_footer(); ?>
-		</footer><!-- .entry-footer -->
+		<div class="footer-section">
+			<footer class="entry-footer">
+				<?php begonia_entry_footer(); ?>
+			</footer><!-- .entry-footer -->
 
-	<?php begonia_single_post_navigation(); ?>
-
+			<?php begonia_single_post_navigation(); ?>
+		</div>
 	</div>
 </article><!-- #post-## -->
