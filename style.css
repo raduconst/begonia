@@ -1105,16 +1105,16 @@ body {
   margin-left: 80px;
   overflow-x: hidden; }
 
-.page .site-title a {
+.page .site-title a, .error404 .site-title a {
   color: #0300FF; }
 
-.page .site-header {
+.page .site-header, .error404 .site-header {
   height: 300px; }
 
-.page .site-content {
+.page .site-content, .error404 .site-content {
   width: 100%;
   margin: 0 auto; }
-  .page .site-content .content-area {
+  .page .site-content .content-area, .error404 .site-content .content-area {
     max-width: 1440px;
     padding: 80px; }
 
