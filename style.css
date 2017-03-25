@@ -1129,9 +1129,11 @@ body {
   height: 300px; }
 
 .page .site-content, .error404 .site-content {
-  max-width: 1440px;
   width: 100%;
-  margin: 80px 80px; }
+  margin: 0 auto; }
+  .page .site-content .content-area, .error404 .site-content .content-area {
+    max-width: 1440px;
+    padding: 80px; }
 
 .single-post .site-title a {
   color: #0300FF; }
