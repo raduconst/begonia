@@ -13,8 +13,13 @@ body {
   }
 
   .site-content {
-    max-width: 1440px;
     width: 100%;
-    margin: 80px 80px;
+    margin: 0 auto;
+
+    .content-area {
+      max-width: 1440px;
+      padding: 80px;
+
+    }
   }
 }
