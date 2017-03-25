@@ -3,7 +3,7 @@ body {
   overflow-x: hidden;
 }
 
-.page {
+.page, .error404 {
   .site-title a {
     color: $color-accent;
   }
