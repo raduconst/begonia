@@ -15,24 +15,42 @@ get_header(); ?>
 		<?php
 		if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'begonia' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
-
 			<?php
+
+			$begonia_sticky_posts = count(get_option('sticky_posts'));
+			$begonia_post_archive_counter = 0;
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
+				/*
+				 * Include the Post-Format-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', 'search' );
-
+				$begonia_post_archive_counter++;
+				switch ($begonia_post_archive_counter % get_option('posts_per_page') ) {
+					case '1':
+						if ( ( $begonia_post_archive_counter !== 1 ) && is_home() && is_front_page() ) {
+							get_template_part( 'template-parts/content', 'no_top' );
+							continue;
+						}
+						get_template_part( 'template-parts/content', 'hero' );
+						break;
+					case '2':
+						if ( ( $begonia_post_archive_counter !== 2 ) && is_home() && is_front_page() ) {
+							get_template_part( 'template-parts/content', 'no_top' );
+							continue;
+						}
+						echo '<div class="main-posts">';
+						get_template_part( 'template-parts/content', 'no_top' );
+						break;
+					default:
+						get_template_part( 'template-parts/content', 'no_top' );
+						break;
+				}
 			endwhile;
-
-			the_posts_navigation();
+			echo '</div>';
+			the_posts_pagination();
 
 		else :
 

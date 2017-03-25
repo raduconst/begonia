@@ -9,3 +9,15 @@ section {
 .screen-reader-text {
     display: none;
 }
+
+@font-face {
+    font-family: 'overpass';
+    src: url('assets/fonts/overpass/overpass-regular.eot');
+    src: url('assets/fonts/overpass/overpass-regular.woff2') format('woff2'),
+    url('assets/fonts/overpass/overpass-regular.woff') format('woff'),
+    url('assets/fonts/overpass/overpass-regular.ttf')  format('truetype');
+}
+
+body * {
+    font-family: overpass, sans-serif;
+}

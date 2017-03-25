@@ -808,7 +808,8 @@ h1.c-hero__entry-title {
       align-items: baseline;
   text-align: left;
   background-color: #0300FF;
-  padding: 80px;
+  padding: 0 80px;
+  height: 80px;
   width: 100%;
   color: #FFFFFF; }
   .site-footer a {
@@ -823,26 +824,42 @@ h2.widget-title {
 
 .widgets-area {
   background-color: #0300FF;
-  padding: 80px 80px 0px 80px;
   width: 100%;
   margin: 0 auto; }
   .widgets-area .widget-area {
+    position: relative;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    padding: 0 40px; }
-    .widgets-area .widget-area p, .widgets-area .widget-area a, .widgets-area .widget-area ul, .widgets-area .widget-area ul > li, .widgets-area .widget-area ul > li, .widgets-area .widget-area ul > li > li, .widgets-area .widget-area li,
-    .widgets-area .widget-area .calendar_wrap {
-      color: white; }
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    padding: 40px; }
     .widgets-area .widget-area .widget {
-      display: -ms-inline-flexbox;
-      display: inline-flex;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-      padding: 40px; }
+      box-sizing: border-box;
+      padding: 40px;
+      outline: 2px solid blue;
+      -ms-flex: 1;
+          flex: 1;
+      -ms-flex-preferred-size: 25%;
+          flex-basis: 25%; }
+      .widgets-area .widget-area .widget .widget-title {
+        font-size: 32px;
+        padding: 0; }
+      .widgets-area .widget-area .widget .textwidget {
+        color: white; }
+      .widgets-area .widget-area .widget ul, .widgets-area .widget-area .widget ul > li {
+        margin: 0; }
+      .widgets-area .widget-area .widget ul > li, .widgets-area .widget-area .widget ul > li > li {
+        list-style: none;
+        margin: 0;
+        line-height: 24px; }
+      .widgets-area .widget-area .widget ul > li > a, .widgets-area .widget-area .widget ul > li > li > a {
+        color: white;
+        font-size: 17px;
+        font-weight: 300; }
+    .widgets-area .widget-area .widget_nav_menu ul > li > a, .widgets-area .widget-area .widget_nav_menu ul > li > li > a {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 36px; }
 
 .toolbar-navigation {
   position: fixed;
@@ -1255,5 +1272,13 @@ section {
 
 .screen-reader-text {
   display: none; }
+
+@font-face {
+  font-family: 'overpass';
+  src: url("assets/fonts/overpass/overpass-regular.eot");
+  src: url("assets/fonts/overpass/overpass-regular.woff2") format("woff2"), url("assets/fonts/overpass/overpass-regular.woff") format("woff"), url("assets/fonts/overpass/overpass-regular.ttf") format("truetype"); }
+
+body * {
+  font-family: overpass, sans-serif; }
 
 /*# sourceMappingURL=style.css.map */
