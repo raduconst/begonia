@@ -2,6 +2,10 @@
   position: absolute;
   z-index: 4;
   margin-left: 80px;
+
+  @include below(small) {
+    margin-left: 35px;
+  }
 }
 
 .site-title a {

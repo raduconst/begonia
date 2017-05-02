@@ -11,8 +11,12 @@
 
 .h0 {
     @extend %heading;
-    font-size: 200px;
+    @extend %fs200 !optional;
     margin-bottom: 80px;
+
+    @include below(small){
+        font-size: 83px;
+    }
 }
 
 %h1 {

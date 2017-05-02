@@ -6,6 +6,8 @@ $card-border-style:    solid                !default;
 $card-border-color:    #DDDDDD              !default;
 $card-radius:          0                    !default;
 
+
+/*general cards styling */
 .c-card {
     height: 100%;
     display: inline-block;
@@ -23,8 +25,23 @@ $card-radius:          0                    !default;
         border-radius: $card-radius;
     }
 
-    @include query-below($desk) {
-        width: 100%;
+    /*cards setup */
+    &:nth-child(4n-2), &:nth-child(4n-1) {
+        width: 66%;
+    }
+
+    &:nth-child(4n), &:nth-child(4n+1) {
+        width: 33%;
+    }
+
+    &:nth-child(n) {
+        @include below(lap) {
+            width: 100%;
+        }
+
+        @include below(small){
+            padding: 15px;
+        }
     }
 }
 
@@ -53,20 +70,6 @@ $card-radius:          0                    !default;
         height: 100%;
         object-fit: cover;
     }
-}
-
-.c-card--stack {
-    // @todo see WUpdates 'surface' class
-}
-
-
-.c-card:nth-child(4n-2), .c-card:nth-child(4n-1) {
-    width: 66%;
-}
-
-
-.c-card:nth-child(4n), .c-card:nth-child(4n+1) {
-    width: 33%;
 }
 
 .c-card .entry-content {
@@ -106,6 +109,10 @@ article:nth-child(1) {
         border-top: solid 3px #fff;
         width: 84px;
         height: 2px;
+
+        @include below(small){
+            width: 30px;
+        }
     }
     &:after {
         content: "";

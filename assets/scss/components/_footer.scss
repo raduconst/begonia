@@ -10,6 +10,10 @@
   width: 100%;
   color: $color-white;
 
+  @include below(lap){
+    padding: 30px;
+  }
+
   a {
     color: $color-white;
   }
@@ -21,4 +25,4 @@ section.widget {
 
   h2.widget-title {
     color: $color-white;
-  }
+}

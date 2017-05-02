@@ -489,7 +489,10 @@ h2 {
 h1, .entry-title a {
   font-size: 50px; }
 
-@media only screen and (max-width: 760px) {
+.h0 {
+  font-size: 200px; }
+
+@media only screen and (max-width: 900px) {
   h6 {
     font-size: 11px; }
   h5 {
@@ -501,9 +504,11 @@ h1, .entry-title a {
   h2 {
     font-size: 29px; }
   h1, .entry-title a {
-    font-size: 42px; } }
+    font-size: 42px; }
+  .h0 {
+    font-size: 158px; } }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 780px) {
   h6 {
     font-size: 11px; }
   h5 {
@@ -515,9 +520,11 @@ h1, .entry-title a {
   h2 {
     font-size: 27px; }
   h1, .entry-title a {
-    font-size: 36px; } }
+    font-size: 36px; }
+  .h0 {
+    font-size: 130px; } }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   h6 {
     font-size: 10px; }
   h5 {
@@ -529,7 +536,9 @@ h1, .entry-title a {
   h2 {
     font-size: 25px; }
   h1, .entry-title a {
-    font-size: 31px; } }
+    font-size: 31px; }
+  .h0 {
+    font-size: 111px; } }
 
 dl,
 ul,
@@ -606,8 +615,10 @@ h1, h2, h3, h4, .lead {
   margin-bottom: 48px; }
 
 .h0 {
-  font-size: 200px;
   margin-bottom: 80px; }
+  @media screen and (max-width: 500px) {
+    .h0 {
+      font-size: 83px; } }
 
 h5 {
   margin-bottom: 32px; }
@@ -696,6 +707,9 @@ small {
   margin-bottom: 80px;
   padding-bottom: 80px;
   text-align: center; }
+  @media screen and (max-width: 500px) {
+    .c-hero {
+      margin-bottom: 15px; } }
 
 .c-hero--half {
   min-height: 50vh; }
@@ -713,6 +727,9 @@ small {
   height: 100%;
   text-align: right;
   margin-right: 95px; }
+  @media screen and (max-width: 500px) {
+    .c-hero__wrap {
+      margin-right: 35px; } }
 
 .c-hero__entry-meta .hero_categories a, .c-hero__entry-meta .posted-on a, .entry-meta .hero_categories a, .entry-meta .posted-on a, .c-hero_read_more a,
 .hero_read_more a, .toolbar-navigation .nav--main .menu-item a, nav.pagination .nav-links, nav.pagination .nav-links .prev, .single-post .single-post-content .footer-section .entry-footer .tags-links a, .single-post .single-post-content .navigation_posts .nav-box a, .comments-area .comment-list .reply a {
@@ -764,7 +781,8 @@ h1.c-hero__entry-title {
       order: 3; }
   .c-hero__content p {
     color: #FFFFFF;
-    width: 428px;
+    max-width: 428px;
+    width: 100%;
     margin-bottom: 48px; }
 
 .c-hero__entry-meta, .entry-meta {
@@ -798,6 +816,9 @@ h1.c-hero__entry-title {
   position: absolute;
   z-index: 4;
   margin-right: 80px; }
+  @media screen and (max-width: 500px) {
+    .site-branding {
+      margin-right: 35px; } }
 
 .site-title a {
   color: white;
@@ -820,6 +841,9 @@ h1.c-hero__entry-title {
   height: 80px;
   width: 100%;
   color: #FFFFFF; }
+  @media screen and (max-width: 900px) {
+    .site-footer {
+      padding: 30px; } }
   .site-footer a {
     color: #FFFFFF; }
 
@@ -841,6 +865,9 @@ h2.widget-title {
     -ms-flex-flow: row wrap;
         flex-flow: row wrap;
     padding: 40px; }
+    @media screen and (max-width: 500px) {
+      .widgets-area .widget-area {
+        padding: 0; } }
     .widgets-area .widget-area .widget {
       box-sizing: border-box;
       padding: 40px;
@@ -849,6 +876,9 @@ h2.widget-title {
           flex: 1;
       -ms-flex-preferred-size: 25%;
           flex-basis: 25%; }
+      @media screen and (max-width: 500px) {
+        .widgets-area .widget-area .widget {
+          padding: 35px; } }
       .widgets-area .widget-area .widget .widget-title {
         font-size: 32px;
         padding: 0; }
@@ -856,12 +886,13 @@ h2.widget-title {
         color: white; }
       .widgets-area .widget-area .widget ul, .widgets-area .widget-area .widget ul > li {
         margin: 0; }
-      .widgets-area .widget-area .widget ul > li, .widgets-area .widget-area .widget ul > li > li {
+      .widgets-area .widget-area .widget ul > li, .widgets-area .widget-area .widget ul > li > li, .widgets-area .widget-area .widget span {
         list-style: none;
+        color: #FFFFFF;
         margin: 0;
         line-height: 24px; }
       .widgets-area .widget-area .widget ul > li > a, .widgets-area .widget-area .widget ul > li > li > a {
-        color: white;
+        color: #FFFFFF;
         font-size: 17px;
         font-weight: 300; }
     .widgets-area .widget-area .widget_nav_menu ul > li > a, .widgets-area .widget-area .widget_nav_menu ul > li > li > a {
@@ -883,6 +914,9 @@ h2.widget-title {
   -webkit-transform: rotate(90deg) translateX(99%);
   transform-origin: right top;
   transform: rotate(90deg) translateX(99%); }
+  @media screen and (max-width: 900px) {
+    .toolbar-navigation {
+      display: none; } }
   .toolbar-navigation .nav--main {
     display: block;
     margin: 0 auto;
@@ -910,13 +944,25 @@ h2.widget-title {
     .toolbar-navigation .nav--main :nth-child(1):after {
       display: none; }
 
+/*general cards styling */
 .c-card {
   height: 100%;
   display: inline-block;
   vertical-align: top;
   padding: 40px;
   color: transparent;
-  background: transparent; }
+  background: transparent;
+  /*cards setup */ }
+  .c-card:nth-child(4n-2), .c-card:nth-child(4n-1) {
+    width: 66%; }
+  .c-card:nth-child(4n), .c-card:nth-child(4n+1) {
+    width: 33%; }
+  @media screen and (max-width: 900px) {
+    .c-card:nth-child(n) {
+      width: 100%; } }
+  @media screen and (max-width: 500px) {
+    .c-card:nth-child(n) {
+      padding: 15px; } }
 
 .c-card__media img {
   width: 100%;
@@ -936,12 +982,6 @@ h2.widget-title {
     width: 100%;
     height: 100%;
     object-fit: cover; }
-
-.c-card:nth-child(4n-2), .c-card:nth-child(4n-1) {
-  width: 66%; }
-
-.c-card:nth-child(4n), .c-card:nth-child(4n+1) {
-  width: 33%; }
 
 .c-card .entry-content {
   max-width: 428px; }
@@ -970,6 +1010,9 @@ article:nth-child(1) .c-hero__image {
     border-top: solid 3px #fff;
     width: 84px;
     height: 2px; }
+    @media screen and (max-width: 500px) {
+      .read-more--arrow:before {
+        width: 30px; } }
   .read-more--arrow:after {
     content: "";
     display: inline-block;
@@ -1012,7 +1055,7 @@ generate utility classes that forces a certain width to the element the classes 
   -ms-flex-preferred-size: 66.666%;
       flex-basis: 66.666%; }
 
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 500px) {
   .u-one-whole-\@small {
     width: 100%;
     -ms-flex-preferred-size: 100%;
@@ -1030,7 +1073,7 @@ generate utility classes that forces a certain width to the element the classes 
     -ms-flex-preferred-size: 66.666%;
         flex-basis: 66.666%; } }
 
-@media only screen and (min-width: 50em) {
+@media only screen and (min-width: 900px) {
   .u-one-whole-\@lap {
     width: 100%;
     -ms-flex-preferred-size: 100%;
@@ -1048,7 +1091,7 @@ generate utility classes that forces a certain width to the element the classes 
     -ms-flex-preferred-size: 66.666%;
         flex-basis: 66.666%; } }
 
-@media only screen and (min-width: 80em) {
+@media only screen and (min-width: 1280px) {
   .u-one-whole-\@desk {
     width: 100%;
     -ms-flex-preferred-size: 100%;
@@ -1080,6 +1123,9 @@ generate utility classes that forces a certain width to the element the classes 
   width: 100%;
   margin: 0 auto;
   padding: 0 40px; }
+  @media screen and (max-width: 500px) {
+    .main-posts {
+      padding: 0 20px; } }
 
 .sticky img {
   border-top: 3px solid #0300FF;
@@ -1119,6 +1165,9 @@ nav.pagination {
 body {
   margin-right: 80px;
   overflow-x: hidden; }
+  @media screen and (max-width: 900px) {
+    body {
+      margin-right: 0; } }
 
 .page .site-title a, .error404 .site-title a {
   color: #0300FF; }

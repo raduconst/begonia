@@ -18,6 +18,10 @@
   transform-origin: left top;
   transform: rotate(-90deg) translateX(-99%);
 
+  @include below(lap){
+    display: none;
+  }
+
   .nav--main {
     display: block;
 

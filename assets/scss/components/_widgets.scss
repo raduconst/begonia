@@ -4,25 +4,25 @@
   margin: 0 auto;
 
   .widget-area {
-    //display: flex;
-    //justify-content: space-between;
-    //padding: 0 40px;
-    //p, a, ul, ul > li, li,
-    //.calendar_wrap{
-    //  color: white;
-    //}
     position: relative;
     display: flex;
     flex-flow: row wrap;
     padding: 40px;
 
+    @include below(small) {
+      padding: 0;
+    }
+
     .widget {
-      //background-color: tomato;
       box-sizing: border-box;
       padding: 40px;
       outline: 2px solid blue;
       flex: 1;
       flex-basis: 25%;
+
+      @include below(small) {
+        padding: 35px;
+      }
 
       .widget-title {
         font-size: 32px;
@@ -37,14 +37,15 @@
         margin: 0;
       }
 
-      ul > li {
+      ul > li, span {
         list-style: none;
+        color: $color-white;
         margin: 0;
         line-height: 24px;
       }
 
       ul > li > a {
-        color: white;
+        color: $color-white;
         font-size: 17px;
         font-weight: 300;
       }

@@ -29,9 +29,9 @@ $baseline-debug:        $debug;
 
 // mobile first means we need min-width media queries
 $breakpoints: (
-    small:              35em,
-    lap:                50em,
-    desk:               80em
+    small:              500px,
+    lap:                900px,
+    desk:               1280px
 );
 
 // https://css-tricks.com/handling-z-index/
@@ -45,7 +45,7 @@ $zindex: (
 
 // typeline
 $typeline-points:       0 1.2, 50 1.6, 200 1.8;
-$typeline-breakpoints:  760px 560px 400px;
+$typeline-breakpoints:  900px 780px 500px;
 $typeline-rules: (
     '%fs12': 12px,
     '%fs14': 14px,
@@ -53,7 +53,9 @@ $typeline-rules: (
     '%fs24': 24px,
     '%fs32': 32px,
     '%fs50': 50px,
-    '%fs80': 80px
+    '%fs80': 80px,
+    '%fs200': 200px,
+
 );
 
 // misc

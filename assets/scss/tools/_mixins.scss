@@ -6,7 +6,7 @@
 }
 
 @mixin below($bpname) {
-    @media not screen and ( min-width: map-get($breakpoints, $bpname) ) {
+    @media screen and ( max-width: map-get($breakpoints, $bpname) ) {
         @content;
     }
 }

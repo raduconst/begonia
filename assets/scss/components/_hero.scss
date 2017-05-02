@@ -10,6 +10,10 @@
     padding-bottom: 80px;
 
     text-align: center;
+
+    @include below(small) {
+        margin-bottom: 15px;
+    }
 }
 
 .c-hero--half       { min-height: 50vh; }
@@ -21,6 +25,10 @@
     height: 100%;
     text-align: left;
     margin-left: 95px;
+
+    @include below(small) {
+        margin-left: 35px;
+    }
 }
 
 %link-style {
@@ -77,7 +85,8 @@ h1.c-hero__entry-title {
 
     p {
         color: $color-white;
-        width: 428px;
+        max-width: 428px;
+        width: 100%;
         margin-bottom: 48px;
     }
 }
