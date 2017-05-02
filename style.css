@@ -4,7 +4,7 @@ Theme URI: https://demos.pixelgrade.com/begonia/
 Author: PixelGrade
 Author URI: https://pixelgrade.com
 Description: Some lovely description of your theme here.
-Version: 0.0.1
+Version: 0.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: begonia
@@ -32,6 +32,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
  * 7.0 - Hacks and Overrides
  *
  */
+@font-face {
+  font-family: 'overpass';
+  src: url("assets/fonts/overpass/overpass-regular.eot");
+  src: url("assets/fonts/overpass/overpass-regular.woff2") format("woff2"), url("assets/fonts/overpass/overpass-regular.woff") format("woff"), url("assets/fonts/overpass/overpass-regular.ttf") format("truetype"); }
+
 /**
  * 1.0 - Reset
  */
@@ -635,6 +640,9 @@ body {
   font-size: 16px;
   line-height: 1.5; }
 
+body * {
+  font-family: overpass, sans-serif; }
+
 b,
 strong {
   font-weight: 400; }
@@ -902,38 +910,6 @@ h2.widget-title {
     .toolbar-navigation .nav--main :nth-child(1):after {
       display: none; }
 
-/*
-
-    Card
-    ====
-
-
-    description:
-    ------------
-    a distinct peace piece of content usually displayed in lists (decks of cards)
-    the card components should visually define its own space (border, padding)
-    the space between cards should come from its container (grid, deck, masonry) or utility classes
-
-
-    expected markup:
-    ----------------
-    <div class="c-card  c-card--inverse">
-
-        <div class="c-card__media">
-            <img src="path/to/my-image.jpg">
-            ...
-        </div>
-
-        <h1 class="c-card__title"> ... </h1>
-        <p class="c-card__subtitle"> ... </p>
-
-        <footer class="c-card__footer">
-            ...
-        </footer>
-
-    </div>
-
- */
 .c-card {
   height: 100%;
   display: inline-block;
@@ -983,6 +959,28 @@ article:nth-child(1) .c-hero__image {
   margin: 4px 20px;
   display: inline-block;
   transform: rotate(180deg); }
+
+.read-more--arrow {
+  display: inline;
+  float: right; }
+  .read-more--arrow:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    border-top: solid 3px #fff;
+    width: 84px;
+    height: 2px; }
+  .read-more--arrow:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin-left: -16px;
+    margin-right: 10px;
+    padding: 6px; }
 
 /**
  * 5.0 - Utility Classes
@@ -1274,56 +1272,5 @@ section {
 
 .screen-reader-text {
   display: none; }
-
-@font-face {
-  font-family: 'overpass';
-  src: url("assets/fonts/overpass/overpass-regular.eot");
-  src: url("assets/fonts/overpass/overpass-regular.woff2") format("woff2"), url("assets/fonts/overpass/overpass-regular.woff") format("woff"), url("assets/fonts/overpass/overpass-regular.ttf") format("truetype"); }
-
-body * {
-  font-family: overpass, sans-serif; }
-
-.c-read-more-arrow-line, .c-hero_read_more > a:before, .c-card:nth-child(4n+1) .hero_read_more > a:before, .c-card:nth-child(4n-1) .hero_read_more > a:before, .c-card:nth-child(4n-2) .hero_read_more > a:before, .c-card:nth-child(4n) .hero_read_more > a:before {
-  content: "";
-  position: absolute;
-  width: 84px;
-  height: 2px;
-  background-color: white;
-  margin-top: 11px; }
-
-.c-read-more-arrow-head, .c-hero_read_more > a:after, .c-card:nth-child(4n+1) .hero_read_more > a:after, .c-card:nth-child(4n-1) .hero_read_more > a:after, .c-card:nth-child(4n-2) .hero_read_more > a:after, .c-card:nth-child(4n) .hero_read_more > a:after {
-  content: "";
-  position: absolute;
-  display: block;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 5px solid white;
-  margin-top: -18px; }
-
-.c-hero_read_more > a:before {
-  left: 265px;
-  margin-top: 12px; }
-
-.c-hero_read_more > a:after {
-  margin-top: -17px;
-  left: 349px; }
-
-.c-card:nth-child(4n+1) .hero_read_more > a:before, .c-card:nth-child(4n-1) .hero_read_more > a:before {
-  left: 315px; }
-
-.c-card:nth-child(4n+1) .hero_read_more > a:after, .c-card:nth-child(4n-1) .hero_read_more > a:after {
-  left: 399px; }
-
-.c-card:nth-child(4n-2) .hero_read_more > a:before {
-  left: 745px; }
-
-.c-card:nth-child(4n-2) .hero_read_more > a:after {
-  left: 829px; }
-
-.c-card:nth-child(4n) .hero_read_more > a:before {
-  left: 1165px; }
-
-.c-card:nth-child(4n) .hero_read_more > a:after {
-  left: 1249px; }
 
 /*# sourceMappingURL=style.css.map */

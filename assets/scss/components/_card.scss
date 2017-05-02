@@ -1,36 +1,3 @@
-/*
-
-    Card
-    ====
-
-
-    description:
-    ------------
-    a distinct peace piece of content usually displayed in lists (decks of cards)
-    the card components should visually define its own space (border, padding)
-    the space between cards should come from its container (grid, deck, masonry) or utility classes
-
-
-    expected markup:
-    ----------------
-    <div class="c-card  c-card--inverse">
-
-        <div class="c-card__media">
-            <img src="path/to/my-image.jpg">
-            ...
-        </div>
-
-        <h1 class="c-card__title"> ... </h1>
-        <p class="c-card__subtitle"> ... </p>
-
-        <footer class="c-card__footer">
-            ...
-        </footer>
-
-    </div>
-
- */
-
 $card-padding:         40px                 !default;
 $card-background:      transparent          !default;
 $card-color:           transparent          !default;
@@ -54,6 +21,10 @@ $card-radius:          0                    !default;
 
     @if ($card-radius != 0) {
         border-radius: $card-radius;
+    }
+
+    @include query-below($desk) {
+        width: 100%;
     }
 }
 
@@ -122,4 +93,30 @@ article:nth-child(1) {
     margin: 4px 20px;
     display: inline-block;
     transform: rotate(180deg);
+}
+
+.read-more--arrow {
+    display: inline;
+    float: right;
+
+    &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        border-top: solid 3px #fff;
+        width: 84px;
+        height: 2px;
+    }
+    &:after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;;
+        border: solid #fff;
+        border-width: 0 3px 3px 0;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        margin-left: -16px;
+        margin-right:10px;
+        padding: 6px;
+    }
 }

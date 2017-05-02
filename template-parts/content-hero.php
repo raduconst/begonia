@@ -48,7 +48,7 @@
 				} else {
 					the_excerpt(); ?>
 					<div class="c-hero_read_more">
-						<a href="<?php the_permalink(); ?>"><?php _e( 'Read More', 'begonia' ); ?></a>
+						<a href="<?php the_permalink(); ?>"><?php _e( 'Read More', 'begonia' ); ?> <div class="read-more--arrow"></div></a>
 					</div>
 					<?php
 				}
