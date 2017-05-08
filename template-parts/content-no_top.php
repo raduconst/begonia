@@ -13,7 +13,9 @@
     <header class="entry-header">
 		<?php if ( has_post_thumbnail() ) : ?>
             <div class="entry-thumbnail">
-				<?php the_post_thumbnail(); ?>
+	            <a class="article__image  article__link" href="<?php the_permalink(); ?>">
+					<?php the_post_thumbnail(); ?>
+	            </a><!-- .article__image -->
             </div>
 		<?php endif;
 		if ( 'post' === get_post_type() ) : ?>

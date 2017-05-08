@@ -1192,10 +1192,10 @@ body {
 .single-post .entry-thumbnail {
   margin-bottom: 0px;
   max-height: 300px;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 300px; }
   .single-post .entry-thumbnail img {
     object-fit: cover;
-    height: 300px;
     width: 100%;
     object-position: 50% 50%; }
   .single-post .entry-thumbnail:before {
