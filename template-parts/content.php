@@ -44,13 +44,10 @@
 				'after'  => '</div>',
 			) );
 			?>
+			<?php begonia_entry_footer(); ?>
 		</div><!-- .entry-content -->
 
 		<div class="footer-section">
-			<footer class="entry-footer">
-				<?php begonia_entry_footer(); ?>
-			</footer><!-- .entry-footer -->
-
 			<?php begonia_single_post_navigation(); ?>
 		</div>
 	</div>
