@@ -540,6 +540,31 @@ h1, .entry-title a {
   .h0 {
     font-size: 111px; } }
 
+input[type="text"], input[type="tel"], input[type="number"], input[type="date"], input[type="email"], input[type="password"], input[type="url"] {
+  padding: 13px 19px 15px;
+  border: 1px solid #E0E0E0;
+  border-radius: 0;
+  font-size: 17px;
+  -webkit-font-smoothing: initial;
+  font-family: "PT Serif", serif;
+  width: 100%;
+  max-width: 100%;
+  color: #383C50;
+  font-weight: 300; }
+
+textarea {
+  padding: 13px 19px 15px;
+  border: 1px solid #E0E0E0;
+  border-radius: 0;
+  font-size: 17px;
+  -webkit-font-smoothing: initial;
+  font-family: "PT Serif", serif;
+  width: 100%;
+  color: #383C50;
+  font-weight: 300;
+  max-width: 100%;
+  resize: vertical; }
+
 dl,
 ul,
 ul > li,
@@ -573,6 +598,30 @@ ol, ol > li {
 
 a:hover {
   text-decoration: underline; }
+
+button, html [type="button"], [type="reset"], [type="submit"] {
+  background: #0300FF;
+  -ms-flex-order: 4;
+      order: 4;
+  max-width: 300px;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  text-align: center;
+  cursor: default;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  background-color: #0300FF;
+  box-sizing: border-box;
+  padding: 20px;
+  border-width: 0;
+  border-style: outset;
+  border-color: buttonface;
+  border-image: initial; }
+  button a, html [type="button"] a, [type="reset"] a, [type="submit"] a {
+    color: #FFFFFF;
+    display: block;
+    width: 100%;
+    padding: 20px; }
 
 pre {
   white-space: pre;
@@ -731,7 +780,7 @@ small {
     .c-hero__wrap {
       margin-right: 35px; } }
 
-.c-hero__entry-meta .hero_categories a, .c-hero__entry-meta .posted-on a, .entry-meta .hero_categories a, .entry-meta .posted-on a, .c-hero_read_more a,
+button a, html [type="button"] a, [type="reset"] a, [type="submit"] a, .c-hero__entry-meta .hero_categories a, .c-hero__entry-meta .posted-on a, .entry-meta .hero_categories a, .entry-meta .posted-on a, .c-hero_read_more a,
 .hero_read_more a, .toolbar-navigation .nav--main .menu-item a, nav.pagination .nav-links, nav.pagination .nav-links .prev, .single-post .single-post-content .footer-section .entry-footer .tags-links a, .single-post .single-post-content .navigation_posts .nav-box a, .comments-area .comment-list .reply a {
   text-transform: uppercase;
   color: #0300FF;
@@ -901,7 +950,7 @@ h2.widget-title {
       line-height: 36px; }
 
 .toolbar-navigation {
-  position: fixed;
+  position: absolute;
   width: 100vh;
   height: 80px;
   top: 0.75em;
@@ -1284,34 +1333,97 @@ body {
     .gallery .wp-caption-text:before,
     .gallery .gallery-caption:before {
       content: "";
-      border-bottom: 3px solid #0300FF;
       display: inline-block;
       width: 50px;
       vertical-align: middle;
       margin-left: 40px; }
 
+/* Comments area */
 .comments-area {
   max-width: 1440px;
   margin: 0 auto;
   padding: 80px;
   color: #0300FF; }
-  .comments-area .comment-list .avatar {
-    width: 40px;
-    height: 40px;
-    margin-bottom: -10px; }
-  .comments-area .comment-list .comment-metadata {
-    margin-top: 10px; }
-  .comments-area .comment-list .fn:before {
-    content: "";
-    border-bottom: 3px solid #0300FF;
-    display: inline-block;
-    width: 50px;
-    vertical-align: middle;
-    margin-left: 30px; }
-  .comments-area .comment-list .bypostauthor {
-    margin-bottom: 40px; }
-  .comments-area .comment-list .reply a {
-    color: #0300FF; }
+  .comments-area h2.comments-title {
+    margin-bottom: 10px; }
+  .comments-area .comment-list {
+    margin-right: 0;
+    margin-bottom: 30px; }
+    .comments-area .comment-list li {
+      list-style-type: none;
+      margin-right: 0; }
+    .comments-area .comment-list .avatar {
+      width: 50px;
+      height: 50px;
+      margin-left: 15px;
+      border-radius: 50%;
+      vertical-align: middle; }
+    .comments-area .comment-list .comment-metadata, .comments-area .comment-list .comment-author {
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-top: 10px;
+      display: inline-block; }
+      .comments-area .comment-list .comment-metadata > a, .comments-area .comment-list .comment-author > a {
+        font-size: 12px; }
+    .comments-area .comment-list .comment-content {
+      margin-right: 68px; }
+      .comments-area .comment-list .comment-content p {
+        font-size: 15px;
+        margin-top: -15px; }
+    .comments-area .comment-list .bypostauthor {
+      margin-bottom: 40px; }
+    .comments-area .comment-list .fn {
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: underline;
+      margin-left: 10px; }
+    .comments-area .comment-list .says {
+      display: none; }
+    .comments-area .comment-list .reply a {
+      color: #0300FF;
+      margin-right: 68px;
+      margin-top: 12px;
+      font-size: 12px; }
+  .comments-area h3#reply-title {
+    margin-bottom: 0; }
+  .comments-area label {
+    display: block;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    margin-top: 8px; }
+  .comments-area .comment-form {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    max-width: 600px; }
+    .comments-area .comment-form > * {
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%; }
+    .comments-area .comment-form textarea#comment {
+      display: block;
+      width: 100%;
+      max-width: 100%; }
+    .comments-area .comment-form .comment-form-author, .comments-area .comment-form .comment-form-email {
+      -ms-flex: 0 0 47%;
+          flex: 0 0 47%; }
+    .comments-area .comment-form .form-submit {
+      text-align: left;
+      margin-top: 20px; }
+      .comments-area .comment-form .form-submit input:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent; }
 
 /**
  * 7.0 - Hacks and Overrides
